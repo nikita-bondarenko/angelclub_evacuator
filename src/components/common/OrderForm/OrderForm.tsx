@@ -5,6 +5,8 @@ import {useMutation} from "@apollo/client";
 import {useGlobalContext} from "../../../context/context";
 import {SEND_MAIL} from "../../../mutations/sendMail";
 import {SEND_MAIL_SECOND} from "../../../mutations/sendMailSecond";
+import {sendCustomMail} from "../../../mutations/sendCustomMail";
+import {EMAIL, EMAIL_FROM, EMAIL_SECOND} from "../../../config";
 
 type OrderFormProps = {
     title: string,
@@ -27,8 +29,17 @@ const OrderForm = ({title, buttonText, emailSubject,subtitle}: OrderFormProps) =
         setIsFormInvalid(!name.trim() || !phone || phone.includes('_'))
     }, [phone, name])
 
-    const [mutation] = useMutation(SEND_MAIL({phone, name, subject: emailSubject}))
-    const [mutation2] = useMutation(SEND_MAIL_SECOND({phone, name, subject: emailSubject}))
+    // const [mutation] = useMutation(SEND_MAIL({phone, name, subject: emailSubject}))
+    // const [mutation2] = useMutation(SEND_MAIL_SECOND({phone, name, subject: emailSubject}))
+
+    const [mailBody, setMailBody] = useState('')
+
+    const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+
+    useEffect(() => {
+        setMailBody(`<p><strong>Телефон:</strong>&nbsp; ${phone}</p><p><strong>ФИО:</strong>&nbsp; ${name}</p>`)
+    }, [phone, name])
 
 
     const initValues = () => {

@@ -5,9 +5,10 @@ import {useGlobalContext} from "../../../../../context/context";
 import Background from "../../../../common/Background/Background";
 import {useMutation} from '@apollo/client';
 import {gql} from "apollo-boost";
-import {EMAIL} from "../../../../../config";
+import {EMAIL, EMAIL_FROM, EMAIL_SECOND} from "../../../../../config";
 import {SEND_MAIL} from "../../../../../mutations/sendMail";
 import {SEND_MAIL_SECOND} from "../../../../../mutations/sendMailSecond";
+import {sendCustomMail} from "../../../../../mutations/sendCustomMail";
 
 const MainPageOrder = () => {
     const [phone, setPhone] = useState<string>('')
@@ -19,8 +20,15 @@ const MainPageOrder = () => {
     const [isPhoneInvalid, setIsPhoneInvalid] = useState(true)
     const [isFormInvalid, setIsFormInvalid] = useState(true)
 
-    const [mutation, {data, loading, error}] = useMutation(SEND_MAIL({phone, email, name, subject: 'Заявка на членство автоклуба с главной страницы'}))
-    const [mutation2] = useMutation(SEND_MAIL_SECOND({phone, email, name, subject: 'Заявка на членство автоклуба с главной страницы'}))
+    const [mailBody, setMailBody] = useState('')
+    const emailSubject = 'Заявка на членство автоклуба с главной страницы'
+
+    const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+
+    useEffect(() => {
+        setMailBody(`<p><strong>Телефон:</strong>&nbsp; ${phone}</p><p><strong>ФИО:</strong>&nbsp; ${name}</p><p><strong>Email:</strong>&nbsp; ${email}</p>`)
+    }, [phone, name, email])
 
 
     const {setIsSuccessModalOpen,mainPageData} = useGlobalContext()

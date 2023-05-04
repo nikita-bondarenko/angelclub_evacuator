@@ -10,8 +10,9 @@ import Payment from '../../../Payment/Payment';
 import {v4} from "uuid";
 import {useMutation} from "@apollo/client";
 import {gql} from "apollo-boost";
-import {EMAIL, EMAIL_SECOND, ID_PREFIX, MODAL_SEARCH} from "../../../../../config";
+import {EMAIL, EMAIL_FROM, EMAIL_SECOND, ID_PREFIX, MODAL_SEARCH} from "../../../../../config";
 import uniqid from "uniqid";
+import {sendCustomMail} from "../../../../../mutations/sendCustomMail";
 
 export type CardInputItem = {
     id: number,
@@ -230,41 +231,9 @@ const NewCardForm = () => {
     const [mailSubject, setMailSubject] = useState<string>(``)
     const [mailBody, setMailBody] = useState<string>(``)
     const [mailId,setMailId] = useState<string>(``)
-    const [mutation] = useMutation(gql`
-        mutation SEND_EMAIL {
-            sendEmail(
-                input: {
-                    to: "${EMAIL}"
-                    from: "mail@testingplace.ru"
-                    subject: "${mailSubject}"
-                body: "${mailBody}"
-                clientMutationId: "${mailId}"
-                }
-            ) {
-                origin
-                sent
-                message
-            }
-        }
-    `)
 
-    const [mutation2] = useMutation(gql`
-        mutation SEND_EMAIL {
-            sendEmail(
-                input: {
-                    to: "${EMAIL_SECOND}"
-                    from: "mail@testingplace.ru"
-                    subject: "${mailSubject}"
-                    body: "${mailBody}"
-                    clientMutationId: "${mailId}"
-                }
-            ) {
-                origin
-                sent
-                message
-            }
-        }
-    `)
+    const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
+    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
 
     const setMailData = () => {
 

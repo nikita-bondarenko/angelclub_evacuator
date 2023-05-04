@@ -8,6 +8,8 @@ import {GatsbyImage} from "gatsby-plugin-image";
 import {stack} from "../../../../../hooks/useClassName";
 import {usePrefixImage} from "../../../../../hooks/usePrefixImage";
 import {SEND_MAIL_SECOND} from "../../../../../mutations/sendMailSecond";
+import {sendCustomMail} from "../../../../../mutations/sendCustomMail";
+import {EMAIL, EMAIL_FROM, EMAIL_SECOND} from "../../../../../config";
 
 const EmergencyHelp = () => {
     const [phone, setPhone] = useState<string>('')
@@ -24,8 +26,15 @@ const EmergencyHelp = () => {
         setIsFormInvalid(!name.trim() || !phone || phone.includes('_'))
     }, [phone, name])
 
-    const [mutation] = useMutation(SEND_MAIL({phone, name, subject: 'Вызов техпомощи'}))
-    const [mutation2] = useMutation(SEND_MAIL_SECOND({phone, name, subject: 'Вызов техпомощи'}))
+    const [mailBody, setMailBody] = useState('')
+    const emailSubject = 'Вызов техпомощи'
+
+    const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+
+    useEffect(() => {
+        setMailBody(`<p><strong>Телефон:</strong>&nbsp; ${phone}</p><p><strong>ФИО:</strong>&nbsp; ${name}</p>`)
+    }, [phone, name])
 
 
     const initValues = () => {

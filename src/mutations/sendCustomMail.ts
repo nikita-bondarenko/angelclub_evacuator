@@ -17,14 +17,18 @@ export const sendCustomMail = ({mailTo, mailFrom, body, subject}: sendCustomMail
 
 
     useEffect(() => {
-        const digestedBody = body.split('"').join('')
-        const digestedSubject = subject.split('"').join('')
-        const digestedMailTo = mailTo.split('"').join('')
-        const digestedMailFrom = mailFrom.split('"').join('')
-        setDigestedBody(digestedBody)
-        setDigestedSubject(digestedSubject)
-        setDigestedMailTo(digestedMailTo)
-        setDigestedMailFrom(digestedMailFrom)
+
+        if ([body, subject, mailTo, mailFrom].every(item => item !== undefined)) {
+            const digestedBody = body.split('"').join('')
+            const digestedSubject = subject.split('"').join('')
+            const digestedMailTo = mailTo.split('"').join('')
+            const digestedMailFrom = mailFrom.split('"').join('')
+            setDigestedBody(digestedBody)
+            setDigestedSubject(digestedSubject)
+            setDigestedMailTo(digestedMailTo)
+            setDigestedMailFrom(digestedMailFrom)
+        }
+
     }, [body, subject, mailTo, mailFrom])
 
 return gql`

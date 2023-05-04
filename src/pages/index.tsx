@@ -18,7 +18,7 @@ export const Head = ({data}: PageProps<Queries.EvacuatorPageQuery>) =>{
     return   <Seo metaData={data?.wpPage?.metaData}></Seo>
 }
 
-function Evacuator({data}: PageProps<Queries.EvacuatorPageQuery> ) {
+function Index({data}: PageProps<Queries.EvacuatorPageQuery> ) {
     const state = globalState(data)
     return (
         <GlobalContext.Provider  value={state}>
@@ -29,7 +29,7 @@ function Evacuator({data}: PageProps<Queries.EvacuatorPageQuery> ) {
     );
 }
 
-export default Evacuator;
+export default Index;
 
 export const query = graphql`  query EvacuatorPage {
     wpPage(slug: {eq: "evakuator"}) {

@@ -5,6 +5,8 @@ import {useGlobalContext} from "../../../../../context/context";
 import {useMutation} from "@apollo/client";
 import {SEND_MAIL} from "../../../../../mutations/sendMail";
 import {SEND_MAIL_SECOND} from "../../../../../mutations/sendMailSecond";
+import {sendCustomMail} from "../../../../../mutations/sendCustomMail";
+import {EMAIL, EMAIL_FROM, EMAIL_SECOND} from "../../../../../config";
 
 const EvacuatorPageOrderSection = () => {
     const [phone, setPhone] = useState<string>('')
@@ -21,8 +23,16 @@ const EvacuatorPageOrderSection = () => {
         setIsFormInvalid(!name.trim() || !phone || phone.includes('_'))
     }, [phone, name])
 
-    const [mutation] = useMutation(SEND_MAIL({phone, name, subject: 'Вызов эвакуатора'}))
-    const [mutation2] = useMutation(SEND_MAIL_SECOND({phone, name, subject: 'Вызов эвакуатора'}))
+
+    const [mailBody, setMailBody] = useState('')
+    const emailSubject = 'Вызов эвакуатора'
+
+    const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: emailSubject}))
+
+    useEffect(() => {
+        setMailBody(`<p><strong>Телефон:</strong>&nbsp; ${phone}</p><p><strong>ФИО:</strong>&nbsp; ${name}</p>`)
+    }, [phone, name])
 
 
     const initValues = () => {
