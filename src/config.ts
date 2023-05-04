@@ -1,5 +1,5 @@
 export const BASE_URL = process.env.BASE_URL ? process.env.BASE_URL + '/' : ''
-// export const EMAIL = 'naradadasosmi@gmail.com'
+export const EMAIL = 'naradadasosmi@gmail.com'
 
 export const EMAIL_SECOND = 'brajbas3@gmail.com'
 
