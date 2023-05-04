@@ -1,0 +1,77 @@
+.body {
+    @apply mb-[100px] relative
+    2xl:mb-[92px]
+    xl:mb-[80px]
+    md:mb-[30px]
+    sm:mb-[25px]
+
+}
+
+
+
+.title {
+    @apply font-bold text-[32px] mb-[60px]
+    2xl:text-[20px] 2xl:mb-[40px]
+    xl:mb-[30px]
+    md:text-[20px] md:leading-[24px] md:mb-[30px]
+    sm:text-[18px] sm:leading-[22px] sm:mb-[25px]
+}
+
+.list {
+    @apply flex flex-col items-stretch w-full gap-[25px]
+    2xl:gap-[22px]
+    xl:gap-[14px]
+    sm:gap-[10px]
+}
+
+.list__item {
+    @apply bg-white rounded-[8px] pl-[25px] pr-[110px] pt-[25px] pb-[12px] relative cursor-pointer
+    2xl:rounded-[8px] 2xl:pl-[20px] 2xl:pr-[60px] 2xl:pt-[20px] 2xl:pb-[8px]
+    xl:rounded-[4px] xl:pt-[15px] xl:pl-[15px] xl:pr-[94px] xl:pb-[7px]
+    md:rounded-[4px]
+    sm:pt-[10px] sm:pl-[10px] sm:pr-[20px] sm:pb-[5px]
+    ;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.item__button {
+    @apply absolute top-[29px] right-[21px] rotate-[180deg] transition-all duration-300
+    2xl:top-[21px] 2xl:right-[15px]
+    xl:top-[18px]
+    md:top-[17px] md:right-[17px]
+    sm:top-[12px] sm:right-[10px]
+}
+
+.item__button.open {
+    @apply rotate-[0deg]
+}
+
+.item__icon {
+    @apply w-[17px] h-[17px] object-contain
+    2xl:w-[15px] 2xl:h-[15px]
+    xl:w-[12px] xl:h-[10px]
+    md:w-[12px] md:h-[10px]
+    sm:w-[10px] sm:h-[8px]
+
+}
+
+.item__title {
+    @apply text-[18px] leading-[25px] font-semibold mb-[13px]
+    2xl:text-[14px] 2xl:leading-[17px] 2xl:mb-[12px]
+    xl:text-[12px] xl:leading-[15px] xl:mb-[8px]
+    md:max-w-[302px] md:mb-[8px]
+    sm:text-[10px] sm:leading-[14px] sm:mb-[5px] sm:max-w-[220px]
+}
+
+.item__wrapper {
+    @apply relative overflow-hidden w-full transition-all duration-300
+}
+
+.item__text {
+    @apply absolute bottom-0 left-0 w-full pb-[13px] pt-[3px] text-[16px] leading-[22px] font-light
+    2xl:pb-[12px] 2xl:text-[12px] 2xl:leading-[16px] 2xl:pt-[0px]
+    xl:text-[10px] xl:leading-[14px] xl:pb-[8px] xl:pt-[7px]
+    md:pb-[5px] md:pt-[2px]
+    sm:text-[8px] sm:leading-[11px] sm:pb-[5px] sm:pt-[5px]
+}
+

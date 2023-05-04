@@ -1,0 +1,65 @@
+.body {
+
+}
+
+.body * {
+    @apply font-mont
+}
+
+.title {
+    @apply text-center mb-[60px]
+    xl:mb-[30px]
+    sm:mb-[25px]
+}
+
+.wrapper {
+    @apply flex gap-[25px]
+    xl:gap-[17px]
+    md:flex-col md:gap-[30px]
+    sm:gap-[25px]
+}
+
+.table {
+    @apply rounded-[10px]
+    xl:rounded-[4px]
+    ;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.table.first {
+    @apply bg-[rgba(0,0,0,0.05)]
+}
+
+.table.second {
+    @apply bg-yellow-400
+}
+
+.table__title {
+    @apply text-[20px] leading-[24px] font-semibold p-[25px]
+    xl:text-[12px] xl:leading-[15px] xl:p-[15px]
+    md:text-[14px] md:leading-[17px]
+    sm:text-[12px] sm:leading-[15px] sm:py-[12px] sm:px-[11px]
+}
+
+.list {
+
+}
+
+.list__item {
+    @apply flex items-stretch border-t-[1px] border-t-[rgba(0,0,0,0.3)]
+}
+
+.item__label {
+    @apply p-[25px] w-[340px] border-r-[rgba(0,0,0,0.3)] border-r-[1px]
+    xl:p-[15px] xl:w-[232px]
+    md:text-[12px] md:leading-[15px] md:w-[280px]
+    sm:py-[12px] sm:px-[11px] sm:text-[8px] sm:leading-[10px] sm:w-[198px]
+}
+
+.item__text {
+    @apply font-semibold p-[25px] pl-[39px] w-[248px] flex items-center
+    xl:w-[170px] xl:p-[15px] xl:pl-[21px]
+    md:text-[12px] md:leading-[15px] md:w-[158px] md:pl-[19px]
+    sm:py-[12px] sm:px-[14px] sm:text-[8px] sm:leading-[10px] sm:w-[112px]
+
+}

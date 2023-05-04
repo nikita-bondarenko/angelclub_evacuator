@@ -1,0 +1,27 @@
+.bottom {
+    @apply  w-full rounded-[10px] bg-[rgba(0,0,0,0.05)] p-[25px] flex items-center gap-[30px]
+    xl:p-[15px] xl:gap-[15px]  xl:rounded-[4px]
+    md:items-start
+    ;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.bottom__image {
+    @apply w-[60px] h-[60px] flex-shrink-0
+    xl:w-[30px] xl:h-[30px]
+    sm:w-[25px] sm:h-[25px]
+}
+
+.bottom__content {
+
+}
+
+.bottom__title {
+    @apply font-semibold
+    md:mb-[16px] md:max-w-[350px]
+    sm:mb-[14px]
+}
+
+.bottom__text {
+
+}

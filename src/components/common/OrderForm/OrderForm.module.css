@@ -1,0 +1,98 @@
+.title {
+    @apply font-mont font-bold text-center text-[32px] mb-[25px]  mx-auto
+    2xl:text-[20px] 2xl:mb-[20px]
+    xl:mb-[10px]
+    md:text-[20px] md:leading-[24px] md:mb-[12px]  md:mx-auto
+    sm:text-[18px] sm:leading-[22px] sm:mb-[10px]
+}
+
+.body {
+    @apply mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    md:mb-[110px]
+    sm:mb-[75px]
+}
+
+.text {
+    @apply font-light text-[18px] text-center mb-[60px]
+    2xl:text-[14px] 2xl:mb-[40px]
+    xl:text-[12px] xl:leading-[16px] xl:mb-[30px]
+    md:mb-[30px] md:text-[14px] md:leading-[19px]
+    sm:mb-[20px] sm:text-[12px] sm:leading-[16px]
+
+}
+
+.form {
+    @apply flex items-stretch  flex-wrap justify-between
+    md:flex-col md:max-w-[282px] md:mx-auto
+    sm:flex-col sm:max-w-[208px] sm:mx-auto
+
+}
+
+.form__input {
+    @apply border-[rgba(0,0,0,0.3)]  rounded-[10px] py-[22px] px-[18px] text-[18px] leading-[25px]  font-semibold border-[2px]  transition-all mr-[0px]
+    2xl:rounded-[8px] 2xl:py-[10px] 2xl:px-[17px] 2xl:text-[12px] 2xl:leading-[12px] 2xl:h-[45px]
+    xl:h-[35px] xl:rounded-[4px] xl:text-[10px] xl:leading-[14px] xl:px-[10px] xl:border-[1px]
+    md:rounded-[4px] md:px-[12px] md:text-[10px] md:leading-[14px] md:border-[1px] md:py-[10px]
+    sm:rounded-[4px] sm:px-[10px] sm:text-[8px] sm:leading-[10px] sm:border-[1px] sm:py-[9px] sm:h-[30px]
+
+}
+
+
+.form__input:focus, .form__input.accent {
+    @apply border-black
+}
+
+.form__input:focus::placeholder {
+    @apply text-black
+}
+
+.form__input:first-child {
+    @apply xl:mb-[0px] md:mb-[14px]
+}
+
+.form__input, .form__submit {
+    @apply w-[calc((100%-30px*2)/3)]
+    2xl:w-[calc((100%-20px*2)/3)]
+    xl:w-[calc((100%-32px*2)/3)]
+    md:w-full
+}
+
+.form__input::placeholder {
+    @apply text-[rgba(0,0,0,0.3)] transition-all
+}
+
+.button {
+    @apply text-[16px] font-bold w-full rounded-[10px] text-black bg-yellow-400 h-full flex items-center justify-center transition-all hover:bg-yellow-500
+    2xl:text-[12px] 2xl:rounded-[8px] 2xl:h-[45px]
+    xl:rounded-[4px]  xl:text-[10px] xl:leading-[14px] xl:h-[35px]
+    md:text-[10px] md:leading-[14px] md:h-[35px] md:rounded-[4px] md:mt-[35px]
+    sm:text-[8px] sm:leading-[11px] sm:h-[30px] sm:rounded-[4px] sm:mt-[25px]
+
+}
+
+.button.disable {
+    @apply bg-[rgba(0,0,0,0.3)] pointer-events-none text-white
+}
+
+
+.form__input.invalid {
+    @apply border-red-500
+}
+
+.form__submit {
+    @apply relative
+}
+
+.error {
+    @apply absolute bottom-[-25px] left-[50%] translate-x-[-50%] text-red-500 transition-all opacity-0 whitespace-nowrap
+    md:text-[8px] md:leading-[11px] md:bottom-[-16px]
+}
+
+.error.visible {
+    @apply opacity-[1]
+}
+
+
+

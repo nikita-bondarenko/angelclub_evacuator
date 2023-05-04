@@ -1,0 +1,28 @@
+
+
+.body {
+    @apply py-[60px]
+    2xl:py-[30px]
+    md:py-[20px]
+}
+
+.text {
+    @apply text-center font-light text-[18px] leading-[25px]
+    2xl:text-[14px] 2xl:leading-[19px]
+    xl:text-[12px] xl:leading-[16px]
+    md:max-w-[280px] md:mx-auto
+    sm:text-[10px] sm:leading-[14px]
+
+}
+
+.br {
+    @apply sm:hidden
+}
+
+.point {
+    @apply hidden md:inline
+}
+
+.link {
+    @apply underline font-semibold transition-all hover:opacity-[0.8]
+}

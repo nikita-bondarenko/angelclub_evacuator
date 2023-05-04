@@ -1,0 +1,57 @@
+.body {
+    @apply mt-[184px]
+    2xl:mt-[120px]
+    xl:mt-[98px]
+    md:mt-[140px]
+    sm:mt-[124px]
+}
+
+.content {
+    @apply flex flex-col items-center
+}
+
+.title {
+    @apply mb-[35px] text-center mx-auto
+    2xl:mb-[30px]
+    xl:mb-[20px]
+    md:mb-[35px]
+    sm:mb-[25px]
+}
+
+.button {
+    @apply mb-[20px] mx-auto
+    2xl:mb-[16px] md:mb-[70px] sm:mb-[49px]
+}
+
+.image {
+    @apply w-[792px] h-[570px] mb-[-34px] mx-auto block z-[-1]
+    2xl:w-[405px] 2xl:h-[290px]  2xl:mb-[-20px]
+    xl:w-[300px] xl:h-[205px] xl:mb-[-18px]
+    md:w-[482px] md:h-[349px] md:mb-[0px]
+    sm:w-[310px] sm:h-[225px] sm:mb-[0px]
+}
+
+.bottom {
+    @apply w-full py-[30px] z-10 opacity-[1] bg-yellow-400
+    2xl:py-[20px]
+    md:py-[15px]
+}
+
+.bottom__list {
+    @apply flex justify-around
+}
+
+
+.item__strong {
+    @apply mb-[12px] mx-auto text-center
+    2xl:mb-[10px]
+    xl:text-[20px] xl:leading-[24px] xl:mb-[6px]
+    md:mb-[8px]
+    sm:text-[14px] sm:leading-[17px] sm:mb-[6px]
+}
+
+.item__text {
+    @apply  mx-auto text-center block
+}
+
+

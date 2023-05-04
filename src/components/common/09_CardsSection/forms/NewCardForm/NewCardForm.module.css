@@ -1,0 +1,46 @@
+.body {
+    @apply w-full pt-[37px]
+    2xl:pt-[23px]
+    xl:pt-[20px] xl:px-[103px]
+    md:pt-[28px] md:px-[0px]
+    sm:pt-[20px] sm:px-[0px]
+
+}
+
+.rules {
+    @apply font-light text-[14px] mb-[20px] cursor-pointer block w-fit
+    2xl:text-[10px] 2xl:mb-[18px]
+    xl:mb-[20px] xl:text-[8px]
+    md:text-[12px] md:leading-[16px] md:mt-[-10px]
+    sm:mb-[15px] sm:text-[8px] sm:leading-[11px]
+}
+
+.link {
+    @apply font-semibold underline underline-offset-1
+}
+
+.bottom {
+    @apply w-full flex justify-center relative
+}
+
+.submit {
+    @apply text-white rounded-[8px] py-[19px] pb-[17px] bg-[rgba(0,0,0,0.8)] w-[273px] font-bold text-[14px] leading-[19px] transition-all hover:bg-[rgba(0,0,0,0.7)]
+    2xl:rounded-[8px] 2xl:py-[9px] 2xl:bg-[rgba(0,0,0,0.8)] 2xl:w-[220px] 2xl:font-bold 2xl:text-[10px] 2xl:leading-[14px]
+    xl:rounded-[4px] xl:w-[177px] xl:text-[8px] xl:leading-[11px]
+    md:text-[10px] md:leading-[14px] md:rounded-[4px] md:py-[10px] md:w-[185px]
+    sm:text-[8px] sm:leading-[11px] sm:rounded-[4px] sm:py-[7px]  sm:w-[140px]
+}
+
+.submit.disabled {
+    @apply opacity-[0.3] pointer-events-none
+}
+
+.error {
+    @apply absolute bottom-[-22px] left-[50%] translate-x-[-50%] text-red-500 transition-all opacity-0  text-[14px]
+    2xl:text-[10px] 2xl:bottom-[-14px]
+    md:text-[8px] md:leading-[11px] md:bottom-[-12px]
+}
+
+.error.visible {
+    @apply opacity-[1]
+}

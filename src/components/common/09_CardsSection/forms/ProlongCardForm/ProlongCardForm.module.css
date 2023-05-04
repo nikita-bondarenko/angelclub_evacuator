@@ -1,0 +1,33 @@
+.body {
+    @apply w-full pt-[37px]
+    2xl:pt-[23px]
+    xl:pt-[20px] xl:px-[103px]
+    md:pt-[28px] md:px-[0px]
+    sm:pt-[20px] sm:px-[0px]
+
+}
+
+.content {
+    @apply flex justify-between flex-wrap gap-y-[23px] mb-[35px]
+    2xl:gap-y-[14px] 2xl:mb-[20px]
+    xl:gap-y-[10px] xl:mb-[20px]
+    md:gap-y-[14px] md:mb-[20px]
+    sm:gap-y-[10px] sm:mb-[15px]
+}
+
+
+.bottom {
+    @apply w-full flex justify-center relative
+}
+
+.submit {
+    @apply text-white rounded-[8px] py-[19px] pb-[17px] bg-[rgba(0,0,0,0.8)] w-[273px] font-bold text-[14px] leading-[19px] transition-all hover:bg-[rgba(0,0,0,0.6)]
+    2xl:rounded-[8px] 2xl:py-[9px] 2xl:bg-[rgba(0,0,0,0.8)] 2xl:w-[220px] 2xl:font-bold 2xl:text-[10px] 2xl:leading-[14px]
+    xl:rounded-[4px] xl:w-[177px] xl:text-[8px] xl:leading-[11px]
+    md:text-[10px] md:leading-[14px] md:rounded-[4px] md:py-[10px] md:w-[185px]
+    sm:text-[8px] sm:leading-[11px] sm:rounded-[4px] sm:py-[7px]  sm:w-[140px]
+}
+
+.submit.disabled {
+    @apply bg-[rgba(0,0,0,0.3)] pointer-events-none text-white
+}

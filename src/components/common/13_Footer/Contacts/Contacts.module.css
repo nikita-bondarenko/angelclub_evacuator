@@ -1,0 +1,246 @@
+.map {
+ @apply rounded-[8px] w-[383px] h-[174px] overflow-hidden
+ xl:rounded-[6px] xl:w-[252px] xl:h-[101px]
+    md:rounded-[4px] md:w-full md:h-[136px]
+    sm:h-[96px]
+}
+
+.social {
+
+}
+
+.phones {
+
+}
+
+.listTitle {
+
+}
+
+.listLink {
+
+}
+
+.listIcon {
+
+}
+
+.listText {
+
+}
+
+.listItem {
+
+}
+
+.listItem__body {
+
+}
+
+.listItem__content {
+
+}
+
+.listSubtext {
+
+}
+
+.body {
+    @apply flex justify-between mb-[60px]
+    xl:mb-[30px]
+    md:grid md:gap-[30px]
+    sm:mb-[25px] sm:gap-[25px]
+}
+
+.nav {
+
+}
+
+.nav__item {
+
+}
+
+.nav__main {
+
+}
+
+.nav__subList {
+
+}
+
+.nav__sub {
+
+}
+
+.nav__subItem {
+
+}
+
+.nav__link {}
+
+.places {
+
+}
+
+.places__item {}
+
+.places__label {
+
+}
+
+.places__text {
+
+}
+
+.listText, .listLink, .nav__main, .places__label, .places__text {
+    @apply text-[18px] leading-[25px]
+    xl:text-[12px] xl:leading-[16px]
+}
+
+.listText,  .nav__main, .places__label {
+    @apply font-semibold
+}
+
+.listTitle, .nav__sub {
+    @apply text-[16px] leading-[22px]
+    xl:text-[10px] xl:leading-[14px]
+
+}
+
+.listSubtext {
+    @apply text-[14px] leading-[19px]
+    xl:text-[8px] xl:leading-[11px]
+}
+
+.listLink, .listTitle, .nav__sub, .places__text, .listSubtext {
+    @apply font-light
+}
+
+.nav, .phones, .social {
+    @apply flex-shrink-0
+}
+
+.phones, .social {
+    @apply mr-[73px] flex flex-col gap-[27px]
+    xl:mr-[62px] xl:gap-[15px]
+    md:mr-[0px] md:gap-[20px]
+
+}
+
+.nav {
+    @apply mr-[31px]
+    xl:mr-[39px]
+    md:mr-[0px]
+}
+
+.listItem__body {
+    @apply flex items-stretch gap-[16px]
+    xl:gap-[10px]
+    sm:gap-[8px]
+}
+
+.social .listItem__body {
+    @apply items-center
+}
+
+.listTitle {
+    @apply mb-[17px]
+    xl:mb-[10px]
+    sm:mb-[8px]
+}
+
+.listIcon {
+    @apply w-[45px] h-[45px] flex-shrink-0
+    xl:w-[29px] xl:h-[29px]
+    sm:w-[27px] sm:h-[27px]
+
+}
+
+.listText {
+    @apply mt-[-3px]
+    xl:mt-[-2px]
+}
+
+.listItem__content {
+    @apply flex flex-col justify-between
+}
+
+.listLink {
+    @apply underline
+    md:no-underline
+}
+
+.nav {
+    @apply flex flex-col gap-[25px]
+    xl:gap-[13px]
+    md:row-end-2 md:col-end-3 md:col-start-1 md:grid
+    sm:gap-[8px]
+}
+
+.nav, .body {
+    @apply  md:grid-cols-[1fr,140px]
+    sm:grid-cols-[1fr,117px]
+}
+
+.nav__item {
+    @apply md:col-start-2 md:col-end-3
+}
+
+.nav__item:first-child {
+    @apply md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-6
+}
+
+.nav__subList {
+    @apply flex flex-col gap-[12px]
+    xl:gap-[4px]
+}
+
+.nav__title {
+    @apply mb-[16px]
+    xl:mb-[10px]
+    sm:mb-[8px]
+}
+
+.nav__link, .listLink {
+    @apply transition-all hover:opacity-[0.6]
+}
+
+.places {
+    @apply flex flex-col gap-[18px]
+    xl:gap-[15px]
+    md:col-start-1 md:col-end-3 md:items-center
+}
+.places__item {
+    @apply md:text-center
+}
+
+.places__item:first-child .places__text {
+    @apply block mt-[12px]
+    xl:text-[10px] xl:leading-[14px] xl:mt-[10px]
+    md:text-[12px] md:leading-[16px] md:mt-[6px]
+    sm:text-[10px] sm:leading-[14px]
+}
+
+.places__item:nth-child(2) .places__text {
+    @apply font-semibold
+}
+
+.listTitle, .listText, .listLink, .nav__main, .places__text, .places__label {
+    @apply  sm:text-[10px] sm:leading-[14px]
+}
+
+.listSubtext, .nav__sub {
+    @apply sm:text-[8px] sm:leading-[11px]
+}
+
+.places, .phones, .social {
+}
+
+.nav__subItem, .nav__item {
+    @apply leading-[0]
+}
+
+
+
+
+

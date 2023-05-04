@@ -1,0 +1,7 @@
+.background {
+    @apply
+    relative
+    bg-yellow-400
+    bg-contain z-10
+    bg-repeat-y
+}

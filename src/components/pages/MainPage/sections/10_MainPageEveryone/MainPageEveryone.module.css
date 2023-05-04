@@ -1,0 +1,43 @@
+.body {
+    @apply relative
+}
+
+.title {
+    @apply mb-[60px]
+    2xl:mb-[40px]
+    xl:mb-[30px]
+}
+
+.list {
+    @apply gap-[25px]  flex flex-col w-full
+    2xl:gap-[20px]
+    xl:gap-[14px]
+}
+
+.item {
+    @apply flex gap-[35px] p-[25px] pl-[89px] pt-[30px] rounded-[8px] relative
+    2xl:gap-[12px]  2xl:p-[20px] 2xl:pt-[30px] 2xl:pl-[50px]
+        xl:rounded-[6px] xl:p-[15px] xl:pt-[25px] xl:pl-[41px]
+        sm:rounded-[4px] sm:pt-[20px] sm:pr-[29px] sm:pb-[15px] sm:pl-[34px]
+    ;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.number {
+    @apply w-[31px] h-[40px]  absolute top-[34px] left-[25px]
+    2xl:w-[17px] 2xl:h-[22px] 2xl:top-[28px] 2xl:left-[20px]
+    xl:w-[13px] xl:h-[18px] xl:top-[22px] xl:left-[15px]
+    sm:w-[11px] sm:h-[14px] sm:top-[20px] sm:left-[15px]
+
+}
+
+.button {
+    @apply mt-[35px] mx-auto
+    2xl:mt-[30px] xl:mt-[20px]
+    md:mt-[25px]
+}
+
+.text {
+    @apply md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+}

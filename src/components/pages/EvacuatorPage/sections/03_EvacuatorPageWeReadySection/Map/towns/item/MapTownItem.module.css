@@ -1,0 +1,77 @@
+
+.towtrucks__district {
+    position: absolute;
+    pointer-events: none;
+}
+
+.towtrucks__district > span {
+    color: #141412;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.towtrucks__district__cao {
+    left: 530px;
+    top: 270px
+}
+
+.towtrucks__district__svao {
+    left: 530px;
+    top: 160px
+}
+
+.towtrucks__district__vao {
+    left: 630px;
+    top: 235px
+}
+
+.towtrucks__district__uvao {
+    left: 610px;
+    top: 335px;
+    transform: rotate(37deg);
+}
+
+.towtrucks__district__uao {
+    left: 560px;
+    top: 425px
+}
+
+.towtrucks__district__uzao {
+    left: 470px;
+    top: 395px;
+    transform: rotate(-55deg);
+}
+
+.towtrucks__district__zao {
+    left: 440px;
+    top: 320px
+}
+
+.towtrucks__district__szao {
+    left: 415px;
+    top: 227px
+}
+
+.towtrucks__district__sao {
+    left: 470px;
+    top: 175px
+}
+
+.towtrucks__district__zelenograd {
+    left: 272px;
+    top: 23px
+}
+
+.towtrucks__district__newmoscow {
+    left: 340px;
+    top: 470px
+}
+
+.towtrucks__district__troitsk {
+    left: 240px;
+    top: 680px
+}
+
+
+
+

@@ -1,0 +1,32 @@
+.body {
+@apply mt-[300px]  relative mb-[254px]
+    xl:mt-[194px] xl:mb-[183px]
+    md:mt-[100px] md:mb-[110px]
+    sm:mt-[94px] sm:mb-[75px]
+}
+
+.content {
+@apply md:pt-[440px] sm:pt-[320px]
+}
+
+.title {
+@apply mb-[25px]
+    xl:mb-[20px]
+}
+
+.text {
+@apply max-w-[543px] mb-[30px]
+    xl:mb-[20px] xl:max-w-[316px]
+    md:mb-[35px] md:text-[12px] md:leading-[16px] md:max-w-[362px]
+}
+
+.button {
+
+}
+
+.image {
+@apply w-[668px] h-[549px] absolute top-[-150px] right-[60px] z-[-1]
+    xl:w-[447px] xl:h-[365px] xl:top-[-80px] xl:right-[45px]
+    md:top-[0px] md:right-[20px] md:w-[476px] md:h-[390px]
+sm:top-[0px] sm:right-[25px] sm:w-[330px] sm:h-[271px]
+}

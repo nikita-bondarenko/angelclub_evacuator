@@ -1,0 +1,54 @@
+.modal {
+    @apply fixed w-[100vw] h-[100vh] top-0 left-0 z-50 opacity-0 invisible transition-all
+}
+
+.modal__wrapper {
+    @apply h-full w-full overflow-auto relative bg-[rgba(0,0,0,0.8)]
+}
+
+/*.modal__back {*/
+/*    @apply absolute w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.8)] transition-colors hover:bg-[rgba(0,0,0,0.75)] cursor-pointer*/
+/*}*/
+
+.modal__back.transparent {
+    @apply bg-transparent hover:bg-transparent
+}
+
+.modal__content {
+    @apply z-40 rounded-[10px] bg-white absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] w-[586px] px-[140px] py-[25px]
+    2xl:w-[510px] 2xl:px-[120px] 2xl:py-[30px] 2xl:rounded-[8px]
+    xl:w-[334px] xl:py-[15px] xl:rounded-[4px] xl:px-[20px]
+    md:w-[334px] md:py-[15px]  md:px-[20px]
+    sm:w-[250px] sm:py-[15px]  sm:px-[15px]
+
+}
+
+.modal__content.higher {
+    @apply relative top-auto left-auto translate-y-0 translate-x-0 my-[250px] mx-auto w-[1200px]
+    2xl:w-[940px] 2xl:my-[150px]
+    xl:w-[820px]
+    md:w-[calc(100%-40px)] md:my-[80px] md:py-[15px]
+    sm:w-[calc(100%-40px)]
+}
+
+.content__close {
+    @apply absolute top-[25px] right-[25px] w-[20px] h-[20px] cursor-pointer transition-all hover:opacity-[0.8]
+    2xl:top-[20px] 2xl:right-[20px] 2xl:w-[14px] 2xl:h-[14px]
+    xl:top-[12px] xl:right-[15px] xl:w-[10px] xl:h-[10px]
+    md:w-[10px] md:h-[10px] md:top-[20px] md:right-[20px]
+    sm:w-[8px] sm:h-[8px] sm:top-[12px] sm:right-[15px]
+
+}
+
+.close__image {
+    @apply w-full h-full object-contain
+}
+
+.modal.open {
+    @apply opacity-[1] visible
+}
+
+
+
+
+

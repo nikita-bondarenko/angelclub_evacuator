@@ -1,0 +1,43 @@
+.pulldown {
+    @apply absolute  transition-all opacity-0 invisible
+}
+
+.pulldown.open {
+    @apply opacity-[1] visible
+}
+
+.pulldown__wrapper {
+    @apply relative pb-[15px]
+    2xl:pb-[10px]
+}
+
+.pulldown__body {
+    @apply p-[12px] rounded-[4px] font-light text-[16px] leading-[123%] bg-gray-400 whitespace-nowrap
+    2xl:p-[7px] 2xl:rounded-[3px] 2xl:text-[14px] 2xl:leading-[123%]
+    xl:text-[10px]
+    md:text-[10px] md:leading-[12px] md:px-[8px] md:py-[6px]
+    sm:text-[8px] sm:leading-[9px] sm:px-[7px] sm:py-[5px]
+
+}
+
+.pulldown__body.high {
+    @apply whitespace-normal min-w-[500px]
+    2xl:min-w-[435px]
+    xl:min-w-[315px]
+    md:min-w-[315px]
+    sm:min-w-[200px]
+
+}
+
+
+.pulldown__triangle {
+    @apply left-[73px]
+}
+
+.pulldown__triangle {
+    @apply border-transparent border-x-[10px] border-t-[15px] border-t-gray-400 absolute bottom-[2px]
+    2xl:border-x-[5px] 2xl:border-t-[10px] 2xl:bottom-[0px]
+    md:border-t-[9px] md:border-x-[4px] md:bottom-[2px]
+    sm:border-t-[7px] sm:border-x-[4px] sm:bottom-[4px]
+
+}

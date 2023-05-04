@@ -1,0 +1,21 @@
+.title {
+    @apply mb-[60px] font-mont text-[32px] leading-[39px] font-bold
+    2xl:text-[22px] 2xl:leading-[27px] 2xl:mb-[40px]
+    xl:text-[20px] xl:leading-[24px] xl:mb-[30px]
+    md:text-[20px] md:leading-[24px] md:mb-[30px] md:max-w-[250px]
+    sm:text-[18px] sm:leading-[22px] sm:mb-[24px] sm:max-w-[230px]
+
+}
+
+.body   {
+    @apply mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    md:mb-[110px]
+    sm:mb-[75px]
+
+}
+
+.cars {
+    @apply md:hidden
+}

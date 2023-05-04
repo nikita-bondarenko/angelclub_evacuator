@@ -1,0 +1,41 @@
+.body {
+
+    @apply py-[60px] relative
+    xl:py-[30px]
+    md:py-[20px]
+    sm:pt-[30px]
+}
+
+.content {
+
+}
+
+.image {
+    @apply absolute object-contain right-[0px] bottom-[0px] w-[320px]
+    xl:w-[175px] xl:right-[50px]
+    md:w-[260px] md:right-[-35px]
+    sm:w-[186px] sm:h-[240px] sm:bottom-[38px] sm:left-[52%] sm:translate-x-[-50%] sm:z-[-1]
+}
+
+.text {
+    @apply
+     md:max-w-[230px] md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px] sm:max-w-none
+
+}
+
+.text_strong {
+    @apply font-semibold md:mt-[15px]
+    sm:mt-[14px]
+    mb-[30px]
+    xl:mb-[20px]
+    md:mb-[25px]
+    sm:mb-[20px]
+    sm:mb-[230px]
+    md:max-w-[230px] md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px] sm:max-w-[270px]
+}
+
+.button {
+    @apply sm:mx-auto sm:h-[35px] sm:w-[204px] sm:text-[10px] sm:leading-[14px]
+}

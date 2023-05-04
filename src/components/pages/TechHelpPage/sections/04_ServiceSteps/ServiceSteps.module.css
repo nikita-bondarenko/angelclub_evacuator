@@ -1,0 +1,57 @@
+.body {
+
+}
+
+.list {
+    @apply flex justify-between
+    sm:flex-col sm:items-center sm:gap-[25px]
+}
+
+.item {
+    @apply flex flex-col items-center max-w-[307px]
+    xl:max-w-[232px]
+    md:max-w-[115px]
+    sm:max-w-[202px]
+}
+
+.item:nth-child(1), .item:last-child {
+    @apply
+    max-w-[288px]
+    xl:max-w-[190px]
+    md:max-w-[126px]
+    sm:max-w-[202px]
+
+}
+
+.divider {
+    @apply w-[175px] h-[2px] bg-[rgba(0,0,0,0.1)] mt-[101px] mx-[-15px]
+    xl:w-[120px] xl:mt-[62px] xl:mx-[-20px] xl:h-[1px]
+    md:h-[2px] md:w-[20px] md:mt-[65px] md:mx-[0px]
+    sm:w-[2px] sm:h-[25px] sm:m-[0]
+}
+
+.divider:nth-child(2) {
+    @apply  md:ml-[-10px] sm:m-[0]
+}
+.divider:nth-child(4) {
+    @apply  md:mr-[-13px] sm:m-[0]
+}
+
+.item__title {
+    @apply text-center mb-[12px]
+    xl:mb-[6px]
+    md:text-[14px] md:leading-[17px] md:mb-[8px]
+    md:text-[12px] md:leading-[15px] md:mb-[6px]
+}
+
+.item__image {
+    @apply w-[73px] h-[73px] mb-[16px]
+    xl:w-[45px] xl:h-[45px] xl:mb-[9.5px]
+    md:w-[48px] md:h-[48px]
+    sm:w-[35px] sm:h-[35px] sm:mb-[10px]
+}
+
+.item__text {
+    @apply text-center md:text-[10px] md:leading-[14px]
+    sm:text-[8px] sm:leading-[11px]
+}

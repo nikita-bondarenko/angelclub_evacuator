@@ -1,0 +1,52 @@
+.header {
+    @apply py-[35px] absolute top-0 left-[50%] translate-x-[-50%] w-[100vw] z-10
+
+    md:py-[25px] md:fixed md:top-0 md:left-0 md:translate-x-[0]  md:bg-white md:z-30 md:w-[100vw]
+    sm:py-[20px]
+
+}
+
+.header__body {
+    @apply flex items-center justify-between gap-[30px] flex-wrap  xl:gap-[20px]
+}
+
+.header__logo {
+    @apply flex items-center z-50
+}
+
+.logo {
+
+}
+
+.logo__title {
+    @apply font-bold
+    text-[16px]
+    2xl:text-[12px]
+    xl:text-[10px]
+    md:text-[12px]
+
+}
+
+.logo__image {
+    @apply w-[63px] h-[60px] mr-[20px] rounded-[18px]
+    2xl:w-[47px] 2xl:h-[45px] 2xl:mr-[14px] 2xl:rounded-[10px]
+    xl:w-[36px] xl:h-[35px] xl:mr-[8px]
+    md:w-[37px] md:h-[35px] md:rounded-[9px]  md:mr-[10px]
+    sm:w-[37px] sm:h-[35px] sm:rounded-[9px]  sm:mr-[10px]
+
+}
+
+.button {
+    @apply hidden bg-yellow-400 transition-colors hover:bg-yellow-500  items-center justify-center z-[50]
+    md:w-[35px] md:h-[35px] md:rounded-[4px] md:flex
+}
+
+.button__images {
+    @apply
+    md:w-[16.5px] md:h-[11px] object-contain
+    sm:w-[16px] sm:h-[11px]
+}
+
+
+
+

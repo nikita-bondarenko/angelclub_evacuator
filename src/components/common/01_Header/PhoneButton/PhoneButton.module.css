@@ -1,0 +1,105 @@
+.icon {
+    @apply z-[20] block
+}
+
+.svg {
+    @apply stroke-[4px] stroke-black xl:stroke-[2px] ;
+    stroke-dasharray: 0 280;
+}
+
+.dark .svg {
+    @apply transition-all duration-[1500ms];
+    stroke-dasharray: 280 0;
+}
+
+@media (max-width: 1299px) {
+
+    .svg {
+        @apply stroke-[4px] stroke-black xl:stroke-[2px] ;
+        stroke-dasharray: 0 200;
+    }
+
+    .dark .svg {
+        @apply transition-all duration-[1500ms];
+        stroke-dasharray: 200 0;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .svg {
+        stroke-dasharray: 0 180;
+
+    }
+
+    .dark .svg {
+        stroke-dasharray: 180 0;
+
+    }
+}
+
+@media (max-width: 479px) {
+
+    .svg {
+        stroke-dasharray: 0 165;
+
+    }
+
+    .dark .svg {
+        stroke-dasharray: 165 0;
+
+    }
+}
+
+
+.phone {
+    @apply font-bold rounded-[8px] bg-yellow-400 transition-all overflow-hidden ml-[60px] hover:bg-yellow-500 relative z-20
+    2xl:ml-[50px] 2xl:rounded-[8px]
+    xl:ml-[42px] xl:rounded-[4px]
+    md:ml-[0px] md:mt-[60px] md:text-[8px] md:py-[0px] md:pr-[0px] md:pl-[0px]
+    sm:ml-[0px] sm:mt-[40px] sm:text-[8px]
+}
+
+.phone.dark {
+    @apply hover:opacity-[0.8]
+}
+
+
+.phone__content {
+    @apply flex items-center justify-center  text-[16px] leading-none absolute top-0 left-0 right-0 bottom-0 transition-all duration-[1500ms] z-[15]
+    2xl:text-[12px]
+    xl:text-[10px]
+}
+
+.phone__icon {
+    @apply w-[18px] h-[18px] mr-[12px] transition-all duration-[1500ms] translate-y-[1px]
+    2xl:w-[14px] 2xl:h-[14px] 2xl:mr-[8px] 2xl:translate-y-[0px]
+    xl:w-[12px] xl:h-[12px] xl:mr-[5px]
+}
+
+.dark .phone__icon {
+    @apply fill-white delay-[500ms]
+}
+
+.dark .phone__content {
+    @apply text-white delay-[500ms]
+}
+
+
+.phone__back {
+    @apply z-[0] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-black w-[300px] h-[300px] rounded-full  scale-0
+    2xl:w-[200px] 2xl:h-[200px];
+    transition: transform 700ms linear, background-color 200ms ease-in-out;
+}
+
+
+.dark .phone__back {
+    @apply scale-100 ease-in-out;
+    transition: transform 1500ms ease-in-out 700ms, background 200ms ease-in-out;
+}
+
+
+.phone__border {
+    @apply z-20
+}

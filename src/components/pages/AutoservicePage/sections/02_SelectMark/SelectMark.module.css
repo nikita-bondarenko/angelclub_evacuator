@@ -1,0 +1,36 @@
+.body {
+@apply py-[60px]
+}
+
+.title {
+@apply mb-[30px] text-center mx-auto
+}
+
+.wrapper {
+@apply flex justify-between
+}
+
+.select {
+@apply h-[69px] w-[383px]
+}
+
+.select__arrow {
+
+}
+
+.select__input {
+
+}
+
+.select__dropdown {
+
+}
+
+.select__list {
+
+}
+
+
+.select__item {
+
+}

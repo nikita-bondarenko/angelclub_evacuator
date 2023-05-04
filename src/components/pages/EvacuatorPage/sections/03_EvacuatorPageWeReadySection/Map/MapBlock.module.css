@@ -1,0 +1,92 @@
+
+.map {
+    @apply relative h-[430px] rounded-[10px] overflow-hidden cursor-grab active:cursor-grabbing mb-[30px]
+    2xl:h-[300px] 2xl:rounded-[5px] 2xl:mb-[30px]
+    xl:h-[224px] xl:rounded-[4px] xl:mb-[25px]
+    md:h-[340px] md:rounded-[4px] md:mb-[20px]
+    sm:h-[240px] sm:rounded-[0px] sm:mb-[20px]
+    ;
+
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.map__window {
+    @apply w-[100vw] absolute top-[50%] left-[50%] translate-x-[-55%] translate-y-[-30%]
+    md:translate-x-[-50%] md:translate-y-[-50%]
+}
+
+.map__body {
+    @apply w-full
+}
+
+/*.map__body:active {*/
+/*    @apply cursor-grabbing*/
+/*}*/
+
+.map__wrapper {
+    @apply h-[929px] relative w-[822px] mx-auto transition-all
+
+}
+
+.map__control {
+    @apply absolute right-[25px] top-[50%] translate-y-[-50%] flex flex-col gap-[17px] z-20
+    xl:right-[12px] xl:gap-[10px]
+    md:right-[13px] md:top-auto md:flex-row md:gap-[10px] md:bottom-[0px]
+    sm:right-[9px] sm:top-auto sm:flex-row sm:gap-[10px] sm:bottom-[0px]
+
+}
+
+.control__button {
+    @apply w-[42px] h-[42px] rounded-full relative cursor-pointer transition-all hover:bg-gray-200
+    2xl:w-[28px] 2xl:h-[28px]
+    xl:w-[18px] xl:h-[18px]
+    md:w-[20px] md:h-[20px] md:bg-white;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.control__image {
+    @apply w-[24px] h-[24px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]
+    2xl:w-[16px] 2xl:h-[16px]
+    xl:w-[12px] xl:h-[12px]
+    md:w-[12px] md:h-[12px]
+}
+
+.svg {
+
+    fill: transparent;
+    width: 100%;
+    height: 100%
+}
+
+.stroke {
+    stroke: #CCC0A3;
+    stroke-width: 2
+}
+
+.district {
+    /*cursor: pointer;*/
+    fill: #fff;
+    stroke-width: 2;
+    /*stroke: #000;*/
+    transition: fill 0.3s ease-in-out;
+}
+
+.district.hover {
+    fill: #F0FA00
+}
+
+.st6 {
+    stroke: #141412;
+    stroke-width: 8;
+}
+
+.st7 {
+    fill: none;
+    stroke: #141412;
+    stroke-width: 8;
+}
+
+.screen {
+    @apply fixed pointer-events-none bg-opacity-25 bg-yellow-500
+}
+

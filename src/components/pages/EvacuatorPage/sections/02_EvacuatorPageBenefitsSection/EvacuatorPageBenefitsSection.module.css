@@ -1,0 +1,90 @@
+.body {
+    @apply flex  justify-between gap-[30px] mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    md:gap-[0px] md:gap-y-[60px] md:flex-wrap md:mb-[110px]
+    sm:gap-[0px] sm:gap-y-[40px] sm:flex-wrap sm:mb-[75px]
+
+}
+
+.item {
+    @apply flex flex-col gap-[0px] items-center max-w-[280px]
+    2xl:gap-[12px] 2xl:max-w-[291px]
+    xl:gap-[0px]
+    md:max-w-none md:w-[calc((100%-30px)/2)] md:gap-[0px]
+}
+
+.decor {
+    @apply rounded-full w-[73px] h-[73px] relative  bg-yellow-400 mb-[16px]
+    2xl:w-[55px] 2xl:h-[55px] 2xl:mb-0
+    xl:mb-[9.5px] xl:w-[45px] xl:h-[45px]
+    md:w-[48px] md:h-[48px] md:mb-[10px]
+    sm:w-[35px] sm:h-[35px] sm:mb-[10px]
+
+
+}
+
+.decor__image {
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-contain
+
+}
+
+.decor__image.first {
+    @apply w-[53px] h-[53px]
+    2xl:w-[38px] 2xl:h-[38px]
+    xl:w-[32px] xl:h-[32px]
+    md:w-[30px] md:h-[30px] md:translate-x-[-46%]
+    sm:w-[23px] sm:h-[24px] sm:translate-x-[-46%]
+
+}
+
+.decor__image.second {
+    @apply w-[47px] h-[38px]  translate-y-[-63%] translate-x-[-48%]
+    2xl:w-[35px] 2xl:h-[28px]
+    xl:w-[29px] xl:h-[22px]
+    md:w-[29px] md:h-[29px] md:translate-x-[-48%]
+    sm:w-[20px] sm:h-[16px] sm:translate-x-[-46%]
+
+}
+
+.decor__image.third {
+    @apply w-[55px] h-[55px]
+    2xl:w-[47px] 2xl:h-[47px]
+    xl:w-[36px] xl:h-[36px]
+    md:w-[37px] md:h-[37px]
+    sm:w-[33px] sm:h-[28px]
+
+}
+
+.decor__image.fourth {
+    @apply w-[47px] h-[47px]
+    2xl:w-[32px] 2xl:h-[32px]
+    xl:w-[25px] xl:h-[26px]
+    md:w-[29px] md:h-[29px] md:translate-x-[-47%]
+    sm:w-[21px] sm:h-[20px] sm:translate-x-[-50%]
+
+}
+
+.title {
+    @apply text-[18px] leading-[22px] font-semibold font-mont  text-center
+    max-w-[180px] mb-[12px]
+    2xl:text-[14px] 2xl:leading-[17px] 2xl:max-w-[120px] 2xl:mb-[0px]
+    xl:max-w-[120px] xl:text-[12px] xl:leading-[15px] xl:mb-[6px]
+    md:max-w-none md:text-[14px] md:leading-[17px] md:mb-[8px]
+    sm:max-w-[120px] sm:text-[12px] sm:leading-[15px]
+
+}
+
+.text {
+    @apply text-[16px] text-center font-light
+    leading-[22px]
+    2xl:text-[12px] 2xl:leading-[16px] 2xl:max-w-[220px]
+    xl:text-[10px] xl:leading-[14px] xl:max-w-[169px]
+    md:max-w-none md:text-[10px] md:leading-[14px]
+    sm:max-w-none sm:text-[8px] sm:leading-[11px]
+
+}
+
+.br {
+    @apply md:hidden sm:inline
+}

@@ -1,0 +1,111 @@
+
+.point {
+    @apply h-[5px]  fixed z-20 pointer-events-none
+}
+
+.point__wrapper {
+    @apply relative
+}
+
+.popup {
+    @apply absolute bottom-[10px] left-[50%] translate-x-[-50%] pb-[20px] transition-all pointer-events-auto
+    xl:pb-[10px]
+    md:pb-[12px]
+}
+
+.popup__body {
+    @apply bg-white rounded-[8px] p-[12px] min-w-[286px] flex flex-col items-center
+    2xl:rounded-[5px] 2xl:p-[10px] 2xl:min-w-[260px]
+    xl:rounded-[4px] xl:min-w-[196px]
+    md:min-w-[259px]  md:pb-[12px]
+    sm:min-w-[186px];
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popup__decor {
+    @apply w-[30px] h-[30px] bg-white absolute bottom-[17px] left-[50%] translate-x-[-50%] skew-x-[38deg] rotate-[63deg] z-[-1]
+    xl:bottom-[7px] xl:rotate-[46deg] xl:skew-x-[1deg]
+    md:bottom-[17px] md:skew-x-[38deg] md:rotate-[63deg]
+    ;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popup__lack {
+    @apply border-transparent border-x-[14px] border-t-[25px] border-t-white bottom-[4px] absolute left-[50%] translate-x-[-56%]
+    xl:translate-x-[-53%] xl:bottom-[-1px] xl:border-x-[16px] xl:border-t-[20px]
+    md:translate-x-[-56%] md:bottom-[4px] md:border-x-[14px] md:border-t-[25px]
+
+}
+
+.title {
+    @apply text-[14px] leading-[19px] text-center font-semibold mb-[4px] max-w-[185px]
+    2xl:text-[12px] 2xl:leading-[16px] 2xl:mb-[8px] 2xl:max-w-[160px]
+    xl:text-[10px] xl:leading-[12px] xl:max-w-[132px] xl:mb-[6px]
+    md:text-[10px] md:leading-[14px] md:max-w-[140px] md:mb-[0px]
+    sm:text-[8px] sm:leading-[11px] sm:max-w-[106px] sm:mb-[0px]
+
+}
+
+.car {
+    @apply flex items-center justify-center gap-[8px] px-[6px] py-[4px]
+        2xl:px-[6px] 2xl:py-[0px]
+    xl:gap-[6px]
+    md:gap-[8px] md:py-[4px]
+    sm:gap-[5px]
+}
+
+.car__image {
+    @apply w-[38px] h-[38px] object-cover
+    2xl:w-[32px] 2xl:h-[32px]
+    xl:w-[21px] xl:h-[21px]
+    md:w-[30px] md:h-[30px]
+    sm:w-[26px] sm:h-[26px]
+
+}
+
+.car__text {
+    @apply text-[14px] leading-[19px] translate-y-[2px]
+    2xl:text-[12px] 2xl:leading-[16px] 2xl:translate-y-[0px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[10px] md:leading-[14px]
+    sm:text-[8px] sm:leading-[11px]
+}
+
+.devider {
+    @apply w-[186px] bg-[rgba(0,0,0,0.05)] h-[1px]
+    2xl:w-[140px]
+    md:w-[132px]
+    sm:w-[108px]
+
+}
+
+.content {
+    @apply py-[8px] flex flex-col items-center mb-[4px]
+    2xl:py-[6px] 2xl:mb-[4px]
+    xl:py-[5px] xl:gap-[4px]
+    md:py-[7px] md:gap-[4px] md:mb-[2px]
+    sm:py-[4px] sm:gap-[4px]
+
+}
+
+.content__text {
+    @apply text-[14px] leading-[19px] text-center
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[10px] md:leading-[14px]
+    sm:text-[8px] sm:leading-[11px]
+
+}
+
+.button {
+    @apply p-[8px] bg-yellow-400  transition-all hover:bg-yellow-500 text-[12px] leading-[16px] min-w-[135px] rounded-[6px] font-bold mb-[4px]  text-center
+    2xl:p-[6px] 2xl:text-[10px] 2xl:leading-[14px] 2xl:min-w-[160px] 2xl:rounded-[6px] 2xl:mb-[6px]
+    xl:mb-[0px] xl:min-w-[126px] xl:rounded-[4px]
+    md:min-w-[132px] md:text-[10px] md:leading-[14px] md:z-[1]
+    sm:min-w-[108px] sm:text-[8px] sm:leading-[11px] sm:z-[1]
+}
+
+
+
+
+

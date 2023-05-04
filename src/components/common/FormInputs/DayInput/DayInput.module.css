@@ -1,0 +1,46 @@
+
+.body {
+    @apply h-full w-full bg-white relative border-[2px] border-[rgba(0,0,0,0.3)] rounded-[10px] overflow-hidden cursor-pointer
+    xl:border-[1px] xl:rounded-[4px]
+}
+
+.wrapper {
+    @apply relative cursor-pointer
+}
+
+.placeholder {
+    @apply   absolute left-[18px] top-[50%] translate-y-[-50%]
+    xl:left-[10px]
+}
+
+.placeholder {
+    @apply font-semibold xl:text-[10px] xl:leading-[14px]
+}
+
+.input {
+    @apply absolute  z-20 pl-[18px] w-full top-[50%] translate-y-[-50%]
+    xl:pl-[10px] xl:flex xl:items-center
+}
+
+
+.input.disable {
+    @apply hidden
+}
+
+.placeholder {
+    @apply opacity-[0.3]
+}
+
+.decor {
+    @apply absolute right-0 top-0 h-full bg-[rgba(0,0,0,0.05)] flex items-center pointer-events-none justify-center w-[60px]
+    xl:w-[40px]
+    md:w-[38px]
+
+}
+
+.icon {
+    @apply w-[25px] h-[25px]
+    xl:w-[18px] xl:h-[18px]
+    md:w-[14px] md:h-[14px]
+
+}

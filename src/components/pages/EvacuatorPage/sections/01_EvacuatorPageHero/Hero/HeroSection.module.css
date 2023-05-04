@@ -1,0 +1,113 @@
+.body {
+    @apply mt-[200px]
+    2xl:mt-[170px]
+    xl:mt-[145px]
+    md:mt-[140px]
+}
+
+.title {
+    @apply font-mont text-[36px] leading-[128%] font-bold mb-[25px]
+    2xl:text-[24px] 2xl:leading-[29px] 2xl:mb-[20px]
+    md:mb-[20px]
+    sm:mb-[18px]
+
+}
+
+.list {
+    @apply mb-[35px]
+    2xl:mb-[30px]
+    xl:mb-[20px]
+    md:mb-[35px]
+    sm:mb-[25px]
+
+}
+
+.item, .item * {
+    @apply text-[17px]  leading-[23px]
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[12px] md:leading-[20px]
+    sm:text-[10px] sm:leading-[14px]
+}
+
+.item{
+ @apply pl-[14px] font-light flex items-center
+ 2xl:pl-[8px]
+ md:block
+ md:relative md:pl-[20px]
+ sm:block sm:relative sm:pl-[16px]
+
+}
+
+.item:not(:last-child) {
+    @apply mb-[16px] 2xl:mb-[8px]  xl:mb-[6px]
+}
+
+.item::before {
+    @apply content-[''] w-[3px] h-[3px] bg-black rounded-full mr-[12px]
+    2xl:w-[2px] 2xl:h-[2px] 2xl:mr-[10px]
+    md:absolute md:left-[10px] md:top-[9px]
+    sm:absolute sm:left-[8px] sm:top-[7px]
+
+}
+
+.strong {
+    @apply font-bold
+}
+
+.form {
+    @apply flex items-stretch mr-[0px]
+    2xl:mr-[-50px]
+    md:justify-between md:mr-[0px]
+}
+
+.input {
+    @apply border-[rgba(0,0,0,0.3)]  font-semibold border-[2px]   transition-all rounded-[10px] py-[18px] px-[17px] text-[16px] mr-[30px]  w-[277px]
+    2xl:rounded-[8px] 2xl:py-[11px] 2xl:px-[13px] 2xl:text-[12px] 2xl:mr-[20px]  2xl:w-[220px]
+    xl:w-[232px]  xl:rounded-[4px]  xl:text-[10px] xl:leading-[14px] xl:px-[10px] xl:border-[1px] xl:py-[10px]  xl:bg-white z-[1]
+    md:text-[10px] md:py-[10px] md:leading-[14px] md:rounded-[4px] md:border-[1px] md:px-[12px]
+    sm:w-[calc(((100%-20px)/2)+10px)] sm:text-[8px] sm:py-[9px] sm:leading-[8px] sm:rounded-[4px] sm:border-[1px] sm:z-[1]
+
+}
+
+.input.invalid {
+    @apply border-red-500
+}
+
+.input::placeholder {
+    @apply text-[rgba(0,0,0,0.3)]
+}
+
+.form__submit {
+    @apply relative w-[277px] 2xl:w-[220px]
+    xl:w-[148px]
+    sm:w-[calc(((100%-20px)/2)-10px)]
+}
+
+.input, .form__submit {
+    @apply md:w-[calc(((100%-30px)/2))] sm:w-[calc(((100%-20px)/2))]
+}
+
+.button {
+    @apply bg-yellow-400 transition-all hover:bg-yellow-500 rounded-[10px] py-[19px]   uppercase font-bold text-[16px] leading-[22px] h-full flex w-full items-center justify-center
+    2xl:rounded-[8px] 2xl:py-[12px] 2xl:px-[40px] 2xl:text-[12px] 2xl:leading-[16px]
+    xl:py-[10px]  xl:text-[10px] xl:leading-[14px] xl:px-[10px] xl:rounded-[4px]
+    md:py-[0px] md:px-[0px] md:rounded-[4px] md:text-[10px] md:w-full
+    sm:py-[0px] sm:px-[0px] sm:rounded-[4px] sm:text-[8px] sm:w-full
+
+}
+
+.error {
+    @apply absolute bottom-[-22px] left-[50%] translate-x-[-50%] text-red-500 transition-all opacity-0 whitespace-nowrap text-[14px]
+    2xl:bottom-[-18px] 2xl:text-[11px]
+    xl:text-[8px] xl:leading-[11px]  xl:bottom-[-12px]
+    md:text-[10px] md:bottom-[-13px]
+    sm:text-[8px] sm:bottom-[-10px]
+
+}
+
+.error.visible {
+    @apply opacity-[1]
+}
+
+

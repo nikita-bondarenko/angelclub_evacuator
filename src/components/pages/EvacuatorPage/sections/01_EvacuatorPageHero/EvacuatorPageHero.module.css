@@ -1,0 +1,43 @@
+.top {
+    @apply relative pb-[146px] mb-[100px] overflow-hidden
+    2xl:pb-[137px] 2xl:mb-[113px]
+    xl:pb-[120px] xl:mb-[80px]
+    md:pb-[395px] md:mb-[90px]
+    sm:pb-[245px] sm:mb-[75px]
+
+}
+
+
+
+.decor {
+    @apply absolute top-0 bottom-[0px] left-[0px]  pointer-events-none z-[0]
+    2xl:bottom-[-30px] 2xl:left-[-20px] 2xl:w-[60vw] 2xl:right-[50%]
+    xl:z-0 xl:left-0 xl:right-[15%] xl:w-auto xl:bottom-0
+    md:w-[100vw] md:right-auto md:bottom-auto md:left-[0px] md:h-full md:top-0 md:z-[0] md:z-[0] !important;
+}
+
+.decor__image {
+    @apply w-full h-full object-cover
+}
+
+/*.top__wrapper {*/
+/*    @apply absolute  bottom-0  left-[48%] pointer-events-none  z-[-1] w-[777px] h-[519px]*/
+/*    2xl:w-[571px] 2xl:h-[381px] 2xl:left-[50%]*/
+/*    xl:w-[504px] xl:h-[338px]*/
+/*    md:w-[510px] md:h-[338px] md:translate-x-[-52%]*/
+/*    sm:w-[328px] sm:h-[217px] sm:translate-x-[-50%]*/
+/*}*/
+
+.picture {
+    @apply absolute  bottom-0  left-[48%] pointer-events-none  z-[-1] w-[777px] h-[519px]
+    2xl:w-[571px] 2xl:h-[381px] 2xl:left-[50%]
+    xl:w-[504px] xl:h-[338px]
+    md:w-[510px] md:h-[338px] md:translate-x-[-52%]
+    sm:w-[328px] sm:h-[217px] sm:translate-x-[-50%] !important
+}
+
+.picture__image {
+    @apply w-full h-full object-contain
+}
+
+

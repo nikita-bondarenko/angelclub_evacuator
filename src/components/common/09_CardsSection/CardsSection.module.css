@@ -1,0 +1,291 @@
+
+.back {
+    @apply relative
+}
+
+
+.background {
+    @apply
+    bg-yellow-400
+    bg-contain z-10
+        bg-repeat-y
+    mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    overflow-hidden md:mb-[0]
+}
+
+.background__image {
+    @apply w-full h-full bg-repeat-y absolute top-0 left-0
+}
+
+.body {
+    @apply py-[60px] flex flex-col items-center
+    2xl:py-[40px]
+    xl:py-[30px]
+    md:px-[70px]
+    sm:py-[25px] sm:px-[25px]
+}
+
+.title {
+    @apply font-mont font-bold text-center text-[32px] mb-[25px]
+    2xl:text-[20px] 2xl:mb-[20px]
+    xl:leading-[24px] xl:mb-[10px]
+    md:text-[20px] md:leading-[24px] md:mb-[12px] md:max-w-[300px]
+    sm:text-[18px] sm:leading-[22px] sm:mb-[10px]
+}
+
+.text {
+    @apply font-light text-[18px] text-center mb-[60px]
+    2xl:text-[14px] 2xl:mb-[40px]
+    xl:text-[12px] xl:leading-[16px] xl:mb-[30px]
+    md:text-[12px] md:leading-[16px] md:mb-[30px] md:max-w-[220px]
+    sm:mb-[25px]
+}
+
+.cards {
+    @apply
+
+    md:mr-[0px] md:relative md:w-full
+}
+
+.cards__prev, .cards__next {
+    @apply hidden md:flex md:items-center md:justify-center md:w-[32px] md:h-[32px] bg-black absolute top-[50%] translate-y-[-50%] transition-all opacity-0 invisible rounded-full z-20
+}
+
+.cards__prev.visible, .cards__next.visible {
+    @apply opacity-[1];
+    visibility: visible;
+}
+
+.cards__next {
+    @apply md:right-[-32px] sm:right-0 translate-x-[50%]
+}
+
+.cards__prev {
+    @apply md:left-[-32px] sm:left-0 translate-x-[-50%]
+}
+
+.cards__arrow {
+    @apply object-contain md:w-[16px] md:h-[16px]
+}
+
+.cards__wrapper {
+    @apply flex items-stretch justify-between w-full px-0 w-full
+    md:absolute md:justify-start md:top-0 md:transition-all md:duration-500 md:max-w-none md:gap-[0px] md:w-auto
+}
+
+.cards__wrapper.nosmooth {
+    @apply md:transition-none
+}
+
+
+.card {
+    @apply rounded-[8px] bg-white flex flex-col justify-between py-[30px] px-[54px] flex-shrink-0 w-[calc((100%-30px*2)/3)]
+    2xl:rounded-[8px] 2xl:py-[20px] 2xl:px-[45px]
+    xl:w-[calc((100%-32px*2)/3)] xl:rounded-[4px] xl:py-[15px] xl:px-[34px]
+    md:rounded-[4px] md:p-[30px] md:flex-shrink-0
+    sm:rounded-[4px] sm:p-[25px] sm:flex-shrink-0
+
+}
+
+
+.card__title {
+    @apply text-[16px] font-bold text-center text-[rgba(0,0,0,0.2)] mb-[25px]
+    2xl:text-[12px] 2xl:mb-[20px]
+    xl:text-[10px] xl:leading-[14px]  xl:mb-[14px]
+    md:text-[14px] md:leading-[19px]  sm:mb-[12px]
+}
+
+.card__body {
+    @apply flex items-center flex-col
+}
+
+.card__picture {
+    @apply w-[288px] h-[210px] mb-[35px]
+    2xl:w-[158px] 2xl:h-[113px] 2xl:mb-[30px]
+    xl:w-[130px] xl:h-[95px] xl:mb-[20px]
+    md:w-[203px] md:h-[147px]
+    sm:w-[164px] sm:h-[119px] sm:mb-[25px]
+}
+
+.card__image {
+    @apply w-full h-full object-contain
+}
+
+.card__multipicture {
+    @apply relative h-[210px] w-full mb-[35px]
+    2xl:h-[113px] 2xl:mb-[30px]
+    xl:mb-[0px]
+    md:h-[147px] md:mb-[20px]
+    sm:mb-[0px]
+}
+
+.card__multipicture .card__picture {
+    @apply absolute top-0 mb-[0px]
+}
+
+.card__multipicture .card__picture.first {
+    @apply left-[-73px]
+    2xl:left-[-11px]
+    md:left-[5px]
+    sm:left-[-2px]
+}
+
+.card__multipicture .card__picture.second {
+    @apply left-[36px]
+    2xl:left-[39px]
+    md:left-[84px]
+    sm:left-[64px]
+
+}
+
+.card__col {
+    @apply flex flex-col items-center mb-[25px]
+    2xl:mb-[20px]
+    sm:mb-[25px]
+}
+
+.card__price {
+    @apply font-semibold text-[36px] mb-[8px]
+    2xl:text-[24px] 2xl:mb-[4px]
+    xl:text-[18px] xl:leading-[22px] xl:mb-[2px]
+    md:mb-[2px] md:text-[20px] md:leading-[24px]
+    sm:mb-[2px] sm:text-[18px] sm:leading-[22px]
+
+}
+
+.card__time {
+    @apply text-[rgba(0,0,0,0.3)] text-center font-semibold text-[16px]
+    2xl:text-[12px]
+    md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+
+}
+
+.card__list {
+    @apply mb-[60px] w-full w-full max-w-[245px]
+    2xl:mb-[40px] 2xl:max-w-[188px]
+    xl:mb-[30px]
+    md:max-w-none md:px-[10px]
+    sm:px-[0px]
+}
+
+.list__item {
+    @apply flex
+}
+
+.list__item:not(:last-child) {
+    @apply mb-[14px]
+    2xl:mb-[8px]
+    xl:mb-[6px]
+    md:mb-[8px]
+    sm:mb-[6px]
+
+}
+
+.list__point {
+    @apply w-[3px] h-[3px] rounded-full bg-black mr-[10px] flex-shrink-0 mt-[9px]
+    2xl:w-[2px] 2xl:h-[2px] 2xl:mr-[8px] 2xl:mt-[6px]
+    xl:mr-[6px]
+    md:mr-[6px]
+    sm:mr-[8px]
+
+}
+
+.list__text {
+    @apply font-light text-[16px] leading-[22px]
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[12px] md:leading-[16px]
+
+}
+
+.list__accent {
+    @apply text-[rgba(0,0,0,0.5)] underline cursor-pointer mr-[5px] relative
+}
+
+
+.pulldown {
+    @apply absolute  transition-all opacity-0 invisible
+}
+
+.pulldown.open {
+    @apply opacity-[1] visible
+}
+
+.pulldown__wrapper {
+    @apply relative pb-[15px]
+    2xl:pb-[10px]
+}
+
+.pulldown__body {
+    @apply p-[12px] rounded-[4px] font-light text-[16px] leading-[123%] bg-gray-400 whitespace-nowrap
+    2xl:p-[7px] 2xl:rounded-[3px] 2xl:text-[14px] 2xl:leading-[123%]
+    xl:text-[10px]
+    md:text-[10px] md:leading-[12px] md:px-[10px] md:py-[8px]
+    sm:text-[8px] sm:leading-[9px] sm:px-[7px] sm:py-[5px]
+
+
+}
+
+.pulldown {
+    @apply left-[-12px] bottom-[20px]
+    2xl:bottom-[16px]
+    md:bottom-[13px]
+
+}
+
+
+.pulldown__triangle {
+    @apply left-[39px]
+}
+
+.pulldown__triangle {
+    @apply border-transparent border-x-[10px] border-t-[15px] border-t-gray-400 absolute bottom-[2px]
+    2xl:border-x-[5px] 2xl:border-t-[10px] 2xl:bottom-[0px]
+    md:border-t-[7px] md:border-x-[4px] md:bottom-[4px]
+
+}
+
+.card__button {
+    @apply w-full h-[60px] rounded-[10px] bg-[rgba(0,0,0,0.05)] font-bold transition-colors hover:bg-[rgba(4,4,4,0.8)] hover:text-white text-[16px]
+    2xl:h-[45px] 2xl:rounded-[8px] 2xl:text-[12px]
+    xl:rounded-[4px] xl:text-[10px] xl:leading-[14px] xl:h-[35px] xl:w-full
+    md:rounded-[4px] md:text-[10px] md:leading-[14px] md:h-[35px] md:w-[204px] md:mx-auto
+    sm:rounded-[4px] sm:text-[8px] sm:leading-[11px] sm:h-[30px] sm:w-[140px] sm:mx-auto
+
+}
+
+.card:nth-child(2) .card__button {
+    @apply text-white bg-[rgba(4,4,4,0.8)] hover:bg-[rgba(0,0,0,0.05)] hover:text-black
+    md:bg-[rgba(0,0,0,0.05)] md:hover:bg-[rgba(4,4,4,0.8)] md:text-black md:hover:text-white
+}
+
+.bottom {
+    @apply flex flex-col items-center w-full pt-[60px]
+    2xl:pt-[40px]
+    xl:pt-[30px]
+    sm:pt-[25px]
+}
+
+.bottom__link {
+    @apply block rounded-[10px] text-[16px]  font-bold text-white uppercase px-[100px] py-[20px] transition-colors bg-[rgba(4,4,4,0.8)] cursor-pointer hover:bg-[rgba(4,4,4,0.7)]
+    2xl:rounded-[8px] 2xl:text-[12px] 2xl:px-[83px] 2xl:py-[14px]
+    xl:rounded-[4px] xl:text-[10px] xl:leading-[14px]  xl:py-[10px]
+    md:rounded-[4px] md:w-full md:py-[9px] md:text-center
+    sm:text-[8px] sm:leading-[11px] sm:w-full sm:py-[10px] sm:text-center;
+
+}
+
+.bottom__desc {
+    @apply font-light block  text-center text-[16px] leading-[22px] max-w-[650px] mt-[25px]
+    2xl:text-[12px] 2xl:leading-[16px] 2xl:max-w-[490px] 2xl:mt-[20px]
+    xl:text-[10px] xl:leading-[14px]
+    md:max-w-[330px]
+    sm:text-[8px] sm:leading-[11px] sm:max-w-[260px];
+}
+
+.br {
+    @apply md:hidden
+}

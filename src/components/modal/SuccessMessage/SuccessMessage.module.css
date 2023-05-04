@@ -1,0 +1,23 @@
+.title {
+    @apply text-center font-bold text-[20px]  uppercase
+    mb-[16px]
+    2xl:text-[14px] 2xl:mb-[8px]
+    xl:mb-[6px] xl:text-[12px] xl:leading-[16px]
+    md:mb-[6px] md:text-[12px] md:leading-[16px]
+}
+
+.body {
+    @apply pt-[50px] pb-[10px] flex flex-col items-center
+    2xl:pt-[24px] 2xl:pb-[0px]
+    xl:pb-[18px] xl:pt-[23px]
+    md:pb-[10px] md:pt-[20px]
+    sm:pb-[5px] sm:pt-[17px]
+
+}
+
+.text {
+    @apply font-light text-[16px] text-center whitespace-nowrap
+    2xl:text-[12px]
+    xl:text-[10px] xl:leading-[14px]
+    sm:text-[8px] sm:leading-[11px]
+}

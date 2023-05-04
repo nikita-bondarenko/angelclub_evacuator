@@ -1,0 +1,43 @@
+.body {
+    @apply justify-center flex items-stretch mb-[30px] pt-[25px]
+        xl:px-[30px] xl:mb-[20px]
+    md:px-[20px] md:pt-[15px] md:pb-[22px] md:mb-[0px]
+    sm:px-[20px] sm:pt-[15px] sm:pb-[25px] sm:mb-[0px]
+
+}
+
+.block {
+    @apply px-[15px] mx-[15px] flex flex-col items-center transition-all hover:bg-yellow-500 w-fit rounded-[8px] pt-[4px] pb-[0px] relative
+    2xl:rounded-[5px]
+    xl:px-[18px]  xl:mx-[19px] xl:pb-[0px]
+    md:px-[10px]  md:mx-[10px] md:pb-[2px] md:rounded-[3px]
+    sm:px-[6px]  sm:mx-[7px] sm:pb-[2px]
+
+}
+
+.block.selected {
+    @apply bg-yellow-400
+}
+
+.block__image {
+    @apply w-[73px] h-[73px] object-cover max-w-none
+    2xl:w-[47px] 2xl:h-[47px]
+    xl:w-[37px] xl:h-[34px]
+    md:w-[35px] md:h-[35px]
+    sm:w-[22px] sm:h-[22px]
+
+}
+
+.block__text {
+    @apply font-light text-[18px] leading-[25px] text-center absolute top-[-33px] left-[50%] translate-x-[-50%] whitespace-nowrap
+    2xl:text-[12px] 2xl:leading-[25px] 2xl:top-[-22px]
+        xl:top-[-27px]
+    md:top-[115%]  md:text-[10px] md:max-w-none md:whitespace-nowrap md:leading-[14px]
+    sm:top-[105%]  sm:text-[8px] sm:max-w-[53px] sm:whitespace-normal sm:leading-[12px]
+
+}
+
+.divider {
+    @apply h-[1px] w-[174px] bg-black self-center  translate-y-[-2px]
+    md:translate-y-[2px]
+}

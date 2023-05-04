@@ -1,0 +1,61 @@
+.body {
+
+}
+
+.item {
+    @apply flex justify-between
+    sm:flex-col-reverse sm:items-center
+}
+
+.item.honest {
+    @apply flex-row-reverse  sm:flex-col-reverse
+
+}
+
+.item:not(:last-child) {
+    @apply mb-[90px]
+    2xl:mb-[70px]
+    xl:mb-[60px]
+
+}
+
+.item:nth-child(2) .item__title {
+    @apply 2xl:whitespace-nowrap md:whitespace-normal
+}
+
+.item__content {
+    @apply w-[calc((100%-180px)/2)] flex-shrink-0 flex flex-col justify-center
+    2xl:w-[calc((100%-140px)/2)]
+    xl:w-[calc((100%-80px)/2)]
+    md:w-[calc((100%-30px)/2)]
+    sm:w-full sm:mb-[20px] sm:items-center
+}
+
+.item__title {
+    @apply mb-[25px] max-w-[404px]
+    2xl:mb-[20px] 2xl:max-w-[265px]
+    md:mb-[14px]
+    sm:text-center sm:max-w-[227px]
+
+}
+.item__text {
+    @apply
+    xl:max-w-[335px]
+    md:text-[12px] md:leading-[16px] md:max-w-[192px]
+    sm:text-center  sm:text-[10px] sm:leading-[14px]  sm:max-w-[273px]
+}
+
+.item__image {
+    @apply h-[327px] flex-shrink-0 rounded-[10px] w-[calc((100%-180px)/2)]
+    2xl:w-[calc((100%-140px)/2)] 2xl:rounded-[8px] 2xl:h-[236px]
+    xl:rounded-[6px] xl:h-[219px] xl:w-[calc((100%-80px)/2)]
+    md:w-[calc((100%-30px)/2)] md:h-[190px] md:rounded-[4px] md:object-right
+    sm:w-[140px] sm:h-[130px]
+}
+
+.button {
+    @apply mt-[35px]
+    2xl:mt-[30px]
+    xl:mt-[20px]
+    md:hidden
+}

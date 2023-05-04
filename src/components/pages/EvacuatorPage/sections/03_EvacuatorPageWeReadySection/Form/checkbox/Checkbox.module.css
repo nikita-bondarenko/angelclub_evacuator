@@ -1,0 +1,24 @@
+.body {
+    @apply rounded-full border-[1px] border-[rgba(0,0,0,0.6)] w-[30px] h-[30px] transition-all relative cursor-pointer
+    2xl:w-[16px] 2xl:h-[16px]
+    xl:w-[14px] xl:h-[14px]
+    md:w-[14px] md:h-[14px] flex-shrink-0
+    sm:w-[12px] sm:h-[12px]
+
+}
+
+.body.checked {
+    @apply bg-yellow-400
+}
+
+.body:hover .point {
+    @apply opacity-[1]
+}
+
+.point {
+    @apply rounded-full w-[15px] h-[15px] bg-yellow-400 opacity-0 transition-all absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
+    2xl:w-[8px] 2xl:h-[8px]
+
+}
+
+

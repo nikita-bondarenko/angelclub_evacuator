@@ -1,0 +1,106 @@
+.body {
+    @apply mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    md:mb-[110px]
+    sm:mb-[75px]
+
+}
+
+.top {
+    @apply flex justify-between items-stretch mb-[50px]
+    2xl:mb-[43px]
+    xl:mb-[26px]
+    md:flex-col md:mb-[30px]
+    sm:flex-col sm:mb-[20px]
+
+}
+
+.top__picture {
+    @apply w-[330px] h-[273px] ml-[-58px] mr-[50px] flex-grow-[2] mt-[-51px]
+    2xl:w-[330px] 2xl:h-[200px] 2xl:ml-[-30px] 2xl:mr-[50px] 2xl:flex-grow-[2] 2xl:mt-[-51px]
+    xl:w-[252px] xl:h-[165px] xl:mb-[35px] xl:mt-[-27px] xl:ml-[-88px] xl:mr-[0px] xl:mb-[0px]
+    md:mx-auto md:mt-[0px] md:w-[281px] md:h-[177px] md:mb-[20px]
+    sm:mx-auto sm:mt-[0px] sm:w-[252px] sm:h-[162px] sm:mb-[20px]
+
+}
+
+.top__image {
+    @apply w-[100%] h-[100%] object-contain
+}
+
+.top__content {
+    @apply w-[calc(100%/2+88px)]
+    2xl:w-[calc(100%/2+60px)]
+    xl:w-[calc(100%/2+75px)]
+    md:w-full
+}
+
+.title {
+    @apply font-bold font-mont text-[32px] mb-[25px]
+    2xl:text-[20px] 2xl:mb-[20px]
+    xl:mb-[24px]
+    md:text-[20px] md:leading-[24px] md:mb-[20px]
+    sm:text-[18px] sm:leading-[22px] sm:mb-[25px]
+
+}
+
+.title.first {
+    @apply hidden
+    md:block
+}
+
+.title.second {
+    @apply md:hidden
+}
+
+.br {
+    @apply xl:hidden
+}
+
+.top__text {
+    @apply font-light text-[18px] leading-[22px]
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+
+}
+
+.top__firstLine {
+    @apply block 2xl:inline xl:block md:inline
+}
+
+.strong {
+    @apply font-semibold
+}
+
+.gallery {
+    @apply flex items-stretch justify-between mb-[50px]
+    2xl:mb-[40px]
+    xl:mb-[30px]
+    sm:mb-[20px]
+}
+
+.gallery__item {
+    @apply rounded-[8px] overflow-hidden w-[calc((100%-30px*2)/3)] h-[219px]
+    2xl:rounded-[5px] 2xl:w-[calc((100%-20px*2)/3)] 2xl:h-[173px]
+    xl:w-[calc((100%-32px*2)/3)] xl:h-[136px] xl:rounded-[4px]
+    md:w-[calc((100%-9px*2)/3)] md:h-[123px]
+    sm:w-[calc((100%-5px*2)/3)] sm:h-[87px]
+
+}
+
+.gallery__image {
+    @apply object-cover w-[100%] h-[100%]
+}
+
+.text {
+    @apply font-light
+    text-[18px] leading-[22px]
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+
+}

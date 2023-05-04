@@ -1,0 +1,27 @@
+.checkbox {
+    @apply w-[16px] h-[16px] rounded-[3px] mr-[12px] inline-block translate-y-[2px] relative
+    2xl:w-[14px] 2xl:h-[14px] 2xl:rounded-[3px] 2xl:mr-[8px] 2xl:translate-y-[2px]
+    xl:w-[12px] xl:h-[12px] xl:mr-[6px] xl:translate-y-[2px]
+    md:w-[20px] md:h-[20px] md:translate-y-[4px] md:mr-[10px]
+    sm:translate-y-[2px] sm:w-[10px] sm:h-[10px] sm:mr-[6px];
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1199px) {
+    .checkbox {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+}
+
+.checkbox__point {
+    @apply bg-[rgba(0,0,0,0.8)] rounded-[3px] w-[10px] h-[10px] scale-0 transition-all absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]
+    2xl:w-[8px] 2xl:h-[8px]
+    xl:w-[7px] xl:h-[7px]
+    md:w-[12px] md:h-[12px]
+    sm:w-[6px] sm:h-[6px]
+
+}
+
+.checkbox__point.checked {
+    @apply scale-100
+}

@@ -1,0 +1,76 @@
+.body {
+
+}
+
+.list {
+    @apply md:flex md:justify-between md:flex-wrap md:mb-[-60px] sm:mb-[0px]
+}
+
+.item {
+    @apply flex justify-between
+        md:flex-col md:w-[204px] md:justify-start
+    sm:flex-col-reverse sm:items-center sm:w-full
+}
+
+.item.honest {
+    @apply flex-row-reverse  md:flex-col sm:flex-col-reverse
+
+}
+
+.item:not(:last-child) {
+    @apply mb-[90px]
+    2xl:mb-[70px]
+    xl:mb-[60px]
+
+}
+
+.item:nth-child(2) .item__title {
+    @apply 2xl:whitespace-nowrap md:whitespace-normal
+}
+
+.item__content {
+    @apply w-[calc((100%-180px)/2)] flex-shrink-0 flex flex-col justify-center
+    2xl:w-[calc((100%-140px)/2)]
+    xl:w-[calc((100%-80px)/2)]
+    md:w-full
+    sm:w-full sm:mb-[20px] sm:items-center
+}
+
+.item__title {
+    @apply mb-[20px]
+    2xl:mb-[20px]
+    md:mb-[14px]
+    sm:text-center sm:mb-[12px]
+
+}
+
+.item__text {
+    @apply
+    xl:max-w-[335px]
+    md:text-[12px] md:leading-[16px] md:max-w-full
+    sm:text-center  sm:text-[10px] sm:leading-[14px]  sm:max-w-[276px]
+}
+
+.item__image {
+    @apply h-[327px] flex-shrink-0 rounded-[10px] w-[calc((100%-180px)/2)]
+    2xl:w-[calc((100%-140px)/2)] 2xl:rounded-[8px] 2xl:h-[236px]
+    xl:rounded-[6px] xl:h-[219px] xl:w-[calc((100%-80px)/2)]
+    md:w-full md:h-[190px] md:rounded-[4px] md:object-right md:mb-[20px]
+    sm:w-[140px] sm:h-[130px]
+}
+
+.item__note {
+    @apply text-[#808080] font-semibold mt-[30px] text-[14px] leading-[19px]
+    xl:text-[8px] xl:leading-[11px] xl:mt-[25px]
+    md:text-[10px] md:leading-[14px] md:mt-[14px]
+    sm:text-[8px] sm:leading-[11px] sm:mt-[8px]
+
+}
+
+
+.button {
+    @apply mt-[35px]
+    2xl:mt-[30px]
+    xl:mt-[20px]
+    md:hidden
+}

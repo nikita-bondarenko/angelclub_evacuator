@@ -1,0 +1,19 @@
+.container {
+
+}
+
+.input {
+    @apply w-full h-full rounded-[10px] border-2 border-[rgba(0,0,0,0.3)] text-[rgba(0,0,0,0.5)] text-[18px] leading-[25px] px-[18px] transition-all font-sans font-semibold
+    xl:rounded-[4px] xl:text-[10px] xl:leading-[14px] xl:px-[10px] xl:border-[1px]
+    sm:text-[8px] sm:leading-[11px]
+}
+
+.input:focus-visible {
+    @apply border-black text-black
+}
+
+.input::placeholder {
+    @apply text-[rgba(0,0,0,0.3)]
+}
+
+

@@ -1,0 +1,55 @@
+.title {
+    @apply font-mont font-bold text-[32px] mb-[60px] text-center
+    2xl:text-[20px] 2xl:mb-[40px]
+    xl:mb-[30px]
+    md:text-[20px] md:leading-[24px] md:mb-[30px]
+    sm:text-[18px] sm:mb-[25px]
+
+}
+
+.body {
+    @apply mb-[140px]
+    2xl:mb-[130px]
+    md:mb-[110px]
+    sm:mb-[75px]
+
+}
+
+.list {
+    @apply flex items-stretch justify-between gap-y-[25px] flex-wrap
+    2xl:gap-y-[20px]
+    md:gap-y-[14px]
+    sm:gap-y-[10px]
+
+}
+
+.item__content {}
+
+.item {
+    @apply w-[calc((100%-30px)/2)] rounded-[10px] flex px-[25px] py-[25px]
+    2xl:w-[calc((100%-20px)/2)] 2xl:rounded-[8px] 2xl:px-[20px] 2xl:py-[20px]
+    xl:rounded-[4px]  xl:p-[15px] xl:pt-[18px]
+    md:w-full md:rounded-[4px] md:p-[15px]  md:pt-[18px]
+    sm:w-full sm:rounded-[4px] sm:p-[15px];
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.item__title {
+    @apply font-semibold text-[18px] mb-[25px] translate-y-[9px]
+    2xl:text-[14px] 2xl:mb-[12px] 2xl:translate-y-[4px]
+    xl:text-[12px] xl:leading-[15px]   xl:mb-[10px]
+    md:mb-[10px]
+}
+
+.item__text {
+    @apply font-light text-[16px] leading-[24px] ml-[-42px] mr-[25px]
+    2xl:text-[12px] 2xl:leading-[16px] 2xl:ml-[-27px] 2xl:mr-[0px]
+    md:ml-[-25px]
+}
+
+.number {
+    @apply w-[26px] h-[30px] object-contain mr-[18px]
+    2xl:w-[16px] 2xl:h-[20px] 2xl:mr-[12px]
+    xl:w-[13px] xl:h-[17px] xl:mr-[10px]
+    md:w-[13px] md:h-[17px]
+}

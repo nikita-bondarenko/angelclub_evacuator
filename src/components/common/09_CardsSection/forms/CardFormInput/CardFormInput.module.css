@@ -1,0 +1,85 @@
+.body {
+    @apply relative transition-all w-[calc((100%-154px)/2)]
+    2xl:w-[calc((100%-100px)/2)]
+    xl:w-[calc((100%-100px)/2)]
+    md:w-full
+}
+
+.content {
+    @apply relative
+}
+
+
+.body.blocked {
+    @apply opacity-[0.3]
+}
+
+.body.blocked * {
+    @apply pointer-events-none
+}
+
+.input {
+    @apply border-[1px] w-full border-black rounded-[8px] px-[16px] py-[13px] text-[14px]  leading-[19px] font-semibold text-[rgba(0,0,0,0.8)] text-left
+    2xl:rounded-[6px] 2xl:px-[10px] 2xl:py-[7px]  2xl:text-[10px] 2xl:xl:leading-[14px]
+    /*xl:rounded-[4px] xl:text-[8px] xl:leading-[11px] xl:py-[7px] xl:px-[10px]*/
+    md:rounded-[4px] md:text-[12px] md:leading-[16px] md:py-[12px] md:px-[12px]
+    sm:text-[10px] sm:leading-[14px] sm:py-[10px] sm:px-[10px]
+}
+
+.light .input {
+    @apply border-[rgba(0,0,0,0.3)]
+}
+
+.input::placeholder {
+    @apply text-[14px]  leading-[19px] font-semibold text-[rgba(0,0,0,0.8)]
+    2xl:text-[10px] 2xl:xl:leading-[14px]
+    md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+}
+
+.light .input::placeholder, .light .label {
+    @apply text-[rgba(0,0,0,0.3)]
+}
+
+.input.invalid {
+    @apply border-red-500
+}
+
+.list {
+    @apply absolute z-20 top-[100%] left-0 max-h-[250px] py-[3px] bg-white w-full overflow-auto rounded-[8px] transition-all opacity-0 invisible;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.list.open {
+    @apply opacity-[1] visible
+}
+
+.list__item {
+    @apply px-[17px] py-[6px] bg-white transition-colors hover:bg-gray-400 cursor-pointer text-[14px]
+    2xl:px-[10px] 2xl:py-[3px] 2xl:text-[10px]
+    md:px-[14px] md:text-[12px] md:leading-[16px] md:py-[7px]
+    sm:px-[12px] sm:text-[10px] sm:leading-[14px] sm:py-[7px]
+
+}
+
+.list__item:not(:last-child) {
+    @apply border-[rgba(0,0,0,0.3)]
+}
+
+.arrow {
+    @apply absolute top-[50%] translate-y-[-50%] right-[15px] pointer-events-none w-[12px] h-[12px]
+    2xl:w-[10px] 2xl:h-[10px] 2xl:right-[10px]
+    md:w-[9px] md:h-[7px] md:right-[12px]
+    md:w-[7px] md:h-[5px] md:right-[10px]
+
+}
+
+.label {
+    @apply mb-[14px] font-semibold leading-[22px] font-mont text-[16px]
+    2xl:mb-[12px]  2xl:leading-[16px]  2xl:text-[12px]
+    xl:text-[10px] xl:leading-[12px] xl:mb-[6px]
+    md:text-[14px] md:leading-[17px] md:mb-[10px]
+    sm:text-[12px] sm:leading-[15px] sm:mb-[8px]
+}
+
+

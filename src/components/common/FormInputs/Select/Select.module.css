@@ -1,0 +1,59 @@
+.select {
+    @apply relative
+}
+
+.select__arrow {
+    @apply absolute top-[50%] translate-y-[-50%] right-[22px] w-[25px] h-[25px] opacity-[0.3] transition-all
+}
+
+.select__input {
+    @apply border-[2px] border-[rgba(0,0,0,0.3)] rounded-[10px] h-full w-full pl-[18px] pr-[50px] transition-all text-black font-semibold
+}
+
+.select__input.disable {
+    @apply opacity-[0.8] pointer-events-none
+}
+
+.select__input:focus-visible {
+    @apply border-black
+}
+
+.select__input:focus-visible + .select__arrow {
+    @apply opacity-[1]
+}
+
+.select__input:focus-visible::placeholder {
+    @apply text-black
+}
+
+
+
+.select__input::placeholder {
+    @apply text-[rgba(0,0,0,0.3)] font-sans font-semibold  transition-all
+}
+
+.select__dropdown {
+    @apply absolute hidden top-[100%] left-[0px]  w-full overflow-hidden rounded-[10px];
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.select__input:focus-visible ~ .select__dropdown  {
+    @apply block
+}
+
+.select__list {
+    @apply w-full  bg-white overflow-y-auto  max-h-[200px]
+}
+
+
+.select__item {
+    @apply transition-all hover:bg-[rgba(0,0,0,0.2)] px-[18px] py-[4px] cursor-pointer font-semibold text-[rgba(0,0,0,0.6)]
+}
+
+.select__item:first-child {
+    @apply pt-[10px]
+}
+
+.select__item:last-child {
+    @apply pb-[10px]
+}

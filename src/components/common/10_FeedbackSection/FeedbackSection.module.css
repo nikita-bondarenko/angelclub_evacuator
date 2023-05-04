@@ -1,0 +1,63 @@
+.body {
+    @apply mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    md:mb-[110px]
+    sm:mb-[75px]
+
+}
+
+.title {
+    @apply text-[32px] font-bold mb-[25px]
+    2xl:text-[20px] 2xl:mb-[20px]
+    xl:mb-[10px]
+    md:text-[20px] md:leading-[24px] md:mb-[12px]
+    sm:text-[18px] sm:leading-[22px] sm:mb-[12px]
+}
+
+.text {
+    @apply text-[18px] font-light leading-[25px] mb-[50px]
+    2xl:text-[14px] 2xl:leading-[19px] 2xl:mb-[32px]
+    xl:text-[12px] xl:leading-[16px] xl:mb-[20px]
+    md:mb-[12px]
+    sm:text-[10px] sm:leading-[14px] sm:max-w-[170px] sm:mb-[10px]
+
+}
+
+.swiper {
+    @apply pt-[70px] relative
+    2xl:pt-[60px]
+    xl:pt-[55px]
+    md:pt-[48px]
+    sm:pt-[50px]
+
+}
+
+.swiper__wrapper {
+    @apply 2xl:max-w-[940px]
+}
+
+.swiper__container {
+    @apply flex
+}
+
+.swiper__nav {
+    @apply absolute top-0 right-[0px] flex gap-[25px]
+    xl:gap-[10px]
+    md:gap-[0px] md:left-[-10px] md:w-fit md:z-10
+}
+
+.swiper__touch {
+    @apply hidden md:block absolute left-[50%] translate-x-[-48%] bottom-[-14px] w-[30px] h-[30px] object-contain pointer-events-none
+}
+
+.swiper__button {
+    @apply w-[24px] h-[24px] transition-all hover:opacity-[0.8]
+    2xl:w-[16px] 2xl:h-[16px]
+    xl:w-[28px] xl:h-[30px] xl:py-[9px] xl:px-[9px]
+    md:w-[28px] md:h-[30px] md:py-[10px] md:px-[10px]
+}
+
+.swiper__icon {
+    @apply w-full h-full object-cover
+}

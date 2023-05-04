@@ -1,0 +1,73 @@
+.body {
+
+}
+
+.title {
+    @apply mb-[25px] text-center
+    xl:mb-[10px]
+    md:mb-[12px]
+    sm:mb-[10px]
+
+}
+
+.text {
+    @apply mb-[30px] text-center
+    xl:mb-[20px]
+    md:mb-[30px] md:text-[14px] md:leading-[19px]
+    sm:mb-[21px] sm:text-[12px] sm:leading-[16px] sm:mx-[-30px]
+
+}
+
+.display {
+    @apply w-[510px] rounded-[10px] bg-[#D9D9D9] flex-shrink-0
+}
+
+.content {
+    @apply max-w-[590px] mx-auto py-[60px]
+    xl:max-w-[388px] py-[30px]
+    md:max-w-[342px]
+    sm:max-w-[240px]
+
+}
+
+.group {
+    @apply flex justify-between items-center gap-[25px] flex-wrap mb-[18px]
+    xl:gap-[15px] xl:mb-[15px]
+    md:gap-[14px] md:mb-[26px]
+    md:gap-y-[14px] md:gap-x-[0px] md:mb-[25px]
+
+}
+
+.group__big__item {
+
+    @apply w-full
+}
+
+.group__small__item {
+    @apply w-[280px]
+    xl:w-[186px]
+    md:w-[164px]
+    sm:w-[115px]
+}
+
+.group__big__item, .group__small__item {
+    @apply h-[60px] xl:h-[30px]
+    md:h-[35px]
+    sm:h-[30px]
+}
+
+.input_big {
+
+}
+
+.input_small {
+
+}
+
+.submit {
+    @apply w-full sm:w-[140px] sm:mx-auto
+}
+
+.disabled.submit {
+    @apply pointer-events-none bg-gray-500
+}

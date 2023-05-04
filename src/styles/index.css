@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    * {
+        @apply box-border font-sans  leading-[130%] text-black;
+
+    }
+
+    :focus, :focus-visible, :focus-within {
+        outline: none;
+    }
+
+    h1, h2, h3, h4, p, ul {
+        @apply m-0 p-0;
+    }
+
+    ul {
+        @apply list-none;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    html {
+        @apply scroll-smooth
+    }
+
+    body {
+        @apply overflow-x-hidden
+    }
+
+    .container {
+        @apply max-w-[1300px] mx-auto px-[50px]
+        2xl:max-w-[1040px] mx-auto 2xl:px-[50px]
+        xl:max-w-[920px]
+        md:px-[20px] md:max-w-[480px]
+        sm:px-[25px] sm:max-w-[360px]
+    }
+
+    [class*="ground-pane"] {
+        filter: grayscale(1);
+    }
+
+
+
+    @media (max-width: 989px) {
+        .swiper-horizontal {
+            padding-left: 124px;
+        }
+    }
+
+    @media (max-width: 479px) {
+        .swiper-horizontal {
+            padding-left: 165px;
+        }
+    }
+
+    @media (max-width: 359px) {
+        .swiper-horizontal {
+            padding-left: calc(100% - 140px);
+        }
+    }
+
+
+    .title-prime {
+        @apply font-bold font-mont text-[36px] leading-[128%]
+        2xl:text-[24px] 2xl:leading-[29px]
+    }
+
+    .title-secondary {
+        @apply  font-bold font-mont text-[32px] leading-[39px]
+        2xl:text-[20px] 2xl:leading-[24px]
+        sm:text-[18px] sm:leading-[22px]
+    }
+
+    .button-prime {
+        @apply h-[60px] w-[277px] text-[16px] leading-[22px] rounded-[10px] bg-yellow-400 hover:bg-yellow-500 flex items-center justify-center font-bold uppercase
+        2xl:h-[45px] 2xl:w-[220px] 2xl:text-[12px] 2xl:leading-[16px] 2xl:rounded-[8px]
+        xl:h-[35px] xl:w-[148px] xl:text-[10px] xl:leading-[14px] xl:rounded-[6px]
+        md:h-[35px] md:w-[204px] md:text-[10px] md:leading-[14px] md:rounded-[4px]
+        sm:h-[30px] sm:w-[140px] sm:text-[8px] sm:leading-[11px] sm:rounded-[4px]
+    }
+
+    .button-secondary {
+        @apply h-[60px] w-[277px] text-[16px] transition-all text-white leading-[22px] rounded-[10px] bg-black hover:bg-[rgba(0,0,0,0.7)] flex items-center justify-center font-bold uppercase
+        2xl:h-[45px] 2xl:w-[220px] 2xl:text-[12px] 2xl:leading-[16px] 2xl:rounded-[8px]
+        xl:h-[35px] xl:w-[148px] xl:text-[10px] xl:leading-[14px] xl:rounded-[6px]
+        md:h-[35px] md:w-[204px] md:text-[10px] md:leading-[14px] md:rounded-[4px]
+        sm:h-[30px] sm:w-[140px] sm:text-[8px] sm:leading-[11px] sm:rounded-[4px]
+    }
+
+    .text-prime {
+        @apply font-sans font-light text-[18px] leading-[25px]
+        2xl:text-[12px] 2xl:leading-[16px]
+        xl:text-[10px] xl:leading-[14px]
+    }
+
+    .section-indent {
+        @apply mb-[140px]
+        2xl:mb-[130px]
+        xl:mb-[120px]
+        md:mb-[110px]
+        sm:mb-[75px]
+    }
+
+    .text-secondary {
+        @apply font-sans font-light text-[16px] leading-[22px]
+        2xl:text-[12px] 2xl:leading-[16px]
+        xl:text-[10px] xl:leading-[14px]
+        md:text-[12px] md:leading-[16px]
+        sm:text-[10px] sm:leading-[14px]
+    }
+
+    .title-small {
+        @apply font-sans font-semibold text-[18px] leading-[25px]
+        2xl:text-[14px] 2xl:leading-[17px]
+        xl:text-[12px] xl:leading-[15px]
+        md:text-[14px] md:leading-[17px]
+        sm:text-[12px] sm:leading-[15px]
+
+    }
+
+    .normalize-image {
+        @apply w-full h-full object-contain
+    }
+
+
+}
+
+.ymaps-2-1-79-copyright__wrap {
+    @apply hidden
+}
+
+.ymaps-2-1-79-map-copyrights-promo{
+    @apply hidden
+}
+
+.swiper-horizontal {
+    @apply items-stretch
+}
+
+
+
+
+@media (max-width: 989px) {
+    .swiper-horizontal {
+        padding-left: 124px;
+    }
+}
+
+@media (max-width: 479px) {
+    .swiper-horizontal {
+        padding-left: 165px;
+    }
+}
+
+@media (max-width: 359px) {
+    .swiper-horizontal {
+        padding-left: calc(100% - 140px);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+

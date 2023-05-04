@@ -1,0 +1,36 @@
+.body {
+    @apply fixed left-0 bottom-[-105px] h-[105px] transition-all w-full bg-yellow-400 flex items-center duration-500 z-[20] pointer-events-none
+    2xl:bottom-[-65px] 2xl:h-[65px]
+    xl:bottom-[-55px] xl:h-[55px]
+    md:bottom-[-78px] md:h-[78px]
+    sm:bottom-[-60px] sm:h-[60px]
+}
+
+.body.open {
+    @apply bottom-[0px]
+}
+
+.content {
+    @apply flex justify-between items-center
+}
+
+.link {
+    @apply font-semibold underline hover:opacity-[0.7] transition-all pointer-events-auto
+}
+
+.text {
+    @apply text-[18px] leading-[25px] font-light
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:mr-[70px]
+    sm:text-[8px] sm:leading-[11px] sm:mr-[20px] sm:flex-grow-0 sm:max-w-[140px]
+
+}
+
+.button {
+    @apply rounded-[10px] w-[256px] h-[72px] bg-black transition-all text-[16px] leading-[22px] font-bold text-white hover:bg-[rgba(0,0,0,0.8)] pointer-events-auto
+    2xl:rounded-[4px] 2xl:w-[160px] 2xl:h-[45px] 2xl:text-[12px] 2xl:leading-[16px]
+    xl:w-[148px] xl:h-[35px] xl:text-[10px] xl:leading-[14px]
+    sm:w-[140px] sm:h-[30px] sm:text-[8px] sm:leading-[11px] sm:flex-shrink-0
+
+}

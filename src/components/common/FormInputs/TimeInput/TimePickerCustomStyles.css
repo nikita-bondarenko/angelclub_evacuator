@@ -1,0 +1,45 @@
+.time_picker_container {
+    @apply h-full !important
+}
+
+.react_times_button {
+    @apply h-full bg-transparent shadow-none !important
+}
+
+.preview_container {
+    @apply p-0   leading-none translate-y-[-50%] left-[18px] top-[50%] h-fit font-sans font-semibold text-[18px]
+    xl:left-[10px] xl:text-[10px]
+    sm:text-[8px] sm:leading-[11px]
+
+    !important
+}
+
+.pointer_drag, .picker_center, .picker_pointer {
+    @apply bg-gray-500 !important
+}
+
+.time_picker_modal_header {
+    @apply bg-yellow-400
+    xl:leading-[26px] xl:h-[40px] xl:mb-[15px]
+    !important
+}
+
+.time_picker_header, .point_wrapper {
+@apply font-sans !important
+}
+
+.point_wrapper {
+    @apply xl:text-[14px]
+}
+
+.time_picker_header, .time_picker_header_delivery {
+    @apply xl:text-[18px]
+}
+
+.modal_container {
+    @apply transition-none w-fit md:left-auto md:right-0 sm:right-[-29px] !important
+}
+
+.react_times_button.pressDown .wrapper {
+    @apply translate-y-0 !important
+}

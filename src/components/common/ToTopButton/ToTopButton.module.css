@@ -1,0 +1,19 @@
+.buttonNav {
+    @apply absolute bottom-0 right-[-35px] transition-all hover:opacity-[0.8]
+    2xl:right-[-10px]
+    xl:bottom-[-2px] xl:right-[0px]
+    md:hidden
+}
+
+.buttonNav__body {
+    @apply w-[38px] h-[50px] relative
+}
+
+.buttonNav__icon {
+    @apply w-[30px] h-[30px] absolute bottom-[15px] left-[50%] translate-x-[-50%]
+    2xl:w-[18px] 2xl:h-[18px] 2xl:bottom-[8px]
+}
+
+.buttonNav__point {
+    @apply w-[30px] h-[30px] 2xl:w-[18px] 2xl:h-[18px] absolute bottom-0 left-[50%] translate-x-[-50%] bg-[rgba(0,0,0,0.05)] rounded-full
+}

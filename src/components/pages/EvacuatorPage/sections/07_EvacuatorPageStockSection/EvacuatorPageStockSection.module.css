@@ -1,0 +1,88 @@
+.body {
+    @apply mb-[140px]
+    2xl:mb-[130px]
+    xl:mb-[120px]
+    md:mb-[110px]
+    sm:mb-[75px]
+}
+
+.title {
+    @apply font-mont font-bold text-[32px] mb-[60px] text-center
+    2xl:text-[20px] 2xl:mb-[40px]
+    xl:mb-[30px]
+    md:text-[20px] md:leading-[24px] md:mb-[30px]
+    sm:text-[18px] sm:leading-[22px] sm:mb-[25px]
+
+}
+
+.block {
+    @apply flex justify-between mb-[35px]
+        2xl:mb-[20px]
+    xl:mb-[23px]
+    md:mb-[20px]
+}
+
+.block:last-child {
+    @apply mb-[35px]
+    2xl:mb-[30px]
+    md:mb-[35px]
+    sm:mb-[25px]
+
+}
+
+.block__decor {
+    @apply w-[45px] h-[45px] bg-gray-400 mr-[18px] relative rounded-full flex-shrink-0
+    2xl:w-[32px] 2xl:h-[32px] 2xl:mr-[12px]
+    xl:w-[28px] xl:h-[28px] xl:mr-[17.5px]
+    md:w-[35px] md:h-[35px] md:mr-[19px]
+    sm:w-[30px] sm:h-[30px] sm:mr-[8px]
+
+}
+
+.block__image {
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-contain
+}
+
+.block__image.first {
+    @apply w-[29px] h-[29px]
+    2xl:w-[22px] 2xl:h-[22px]
+    xl:w-[19px] xl:h-[19px]
+    md:w-[23px] md:h-[23px]
+    sm:w-[20px] sm:h-[20px]
+
+}
+
+.block__image.second {
+    @apply w-[27px] h-[28px]
+    2xl:w-[20px] 2xl:h-[20px]
+    xl:w-[18px] xl:h-[18px]
+    md:w-[21px] md:h-[21px]
+    sm:w-[18px] sm:h-[18px]
+
+}
+
+.block__text {
+    @apply text-[18px] leading-[25px] font-light flex-grow-0
+    2xl:text-[12px] 2xl:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+
+}
+
+.strong {
+    @apply font-semibold
+}
+
+.link {
+    @apply px-[57px] py-[19px] rounded-[10px] bg-yellow-400 hover:bg-yellow-500 transition-all text-[16px] leading-[22px] font-bold mx-auto
+    2xl:px-[45px] 2xl:py-[14px] 2xl:rounded-[8px] 2xl:text-[12px] 2xl:leading-[16px]
+    xl:py-[10px] xl:rounded-[4px] xl:px-[19px] xl:text-[10px] xl:leading-[14px]
+    md:py-[10px] md:rounded-[4px] md:px-[45px] md:text-[10px] md:leading-[14px]
+    sm:py-[9px] sm:rounded-[4px] sm:px-[25px] sm:text-[8px] sm:leading-[11px]
+
+}
+
+.bottom {
+    @apply flex justify-center
+}
+
+

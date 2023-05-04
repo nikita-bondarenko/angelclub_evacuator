@@ -1,0 +1,5 @@
+.bottom {
+    @apply
+    md:mt-[110px]
+    sm:mt-[75px]
+}

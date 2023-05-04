@@ -1,0 +1,140 @@
+.body {
+    @apply pt-[30px] pb-[25px] border-t-[1px] border-[rgba(0,0,0,0.08)]
+    xl:pb-[30px] xl:pt-[15px]
+    md:pt-[15px] md:pb-[15px]
+}
+
+.list {
+    @apply flex justify-between mb-[285px] items-center mx-[-50px]
+    2xl:mb-[200px]
+    xl:mb-[140px]
+    md:mx-[-20px] md:flex-wrap md:gap-[14px] md:mb-[80px] md:pr-[35px]
+    sm:mx-[-25px] sm:gap-[11px] sm:pr-[0px]
+}
+
+.divider {
+    @apply w-[1px] h-[25px] bg-[rgba(0,0,0,0.3)]
+    2xl:h-[20px]
+    xl:h-[16px]
+    md:hidden
+}
+
+.list__item {
+    @apply relative md:h-[11px] md:leading-none md:flex md:items-start
+}
+
+.list__item:nth-child(7), .list__item:nth-child(9) {
+    @apply md:w-full  md:flex md:justify-end
+}
+
+.list__item:nth-child(7) {
+    @apply md:pr-[5px]
+}
+
+.list__item:nth-child(9) {
+    @apply md:pr-[7px]
+}
+
+.list__item:nth-child(3) {
+    @apply md:translate-x-[-33px] sm:translate-x-[0px]
+}
+
+.list__item:nth-child(5) {
+    @apply md:pr-[8px]
+}
+
+
+.item__name {
+    @apply font-light text-[18px] leading-[25px]
+    2xl:text-[14px] 2xl:leading-[19px]
+    xl:text-[10px] xl:leading-[14px]
+    sm:text-[8px] sm:leading-[11px]
+
+}
+
+.link {
+    @apply hover:text-transparent relative
+}
+
+.link__pseudo {
+    @apply absolute inline-block  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full   font-light z-0   opacity-[0] hover:opacity-[1] hover:font-medium ;
+    transition: font-weight 0.2s linear;
+}
+
+.link__pseudo.sm {
+    @apply text-[16px]
+    2xl:text-[12px]
+    xl:text-[8px] xl:leading-[11px]
+    md:text-[6px] md:leading-[8px]
+}
+
+.link__pseudo.lg {
+    @apply text-[18px]
+    2xl:text-[14px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[8px] md:leading-[11px]
+
+}
+
+.sublist {
+    @apply absolute top-[150%] flex flex-col gap-[10px] left-0 w-fit
+    2xl:gap-[2px]
+    xl:gap-[4px] xl:top-[140%]
+    md:gap-[6px] md:top-[130%]
+    sm:gap-[4px] sm:top-[150%]
+}
+
+.sublist__link {
+    @apply font-light text-[16px] leading-[22px] whitespace-nowrap
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[8px] xl:leading-[11px]
+    sm:text-[6px] sm:leading-[8px]
+
+}
+
+.sublist__item {
+    @apply xl:leading-[0] md:leading-none md:h-[8px]
+}
+
+.bottom {
+    @apply flex items-center justify-between mx-[-50px] flex-row-reverse
+    md:mx-[-20px] md:flex-wrap-reverse md:gap-[14px]
+    sm:mx-[-25px] sm:gap-[10px] sm:flex-col-reverse
+}
+
+.bottom__logo {
+    @apply font-light
+    md:w-full md:text-center
+    sm:mb-[4px]
+}
+
+.bottom__doc {
+    @apply font-semibold underline transition-all hover:opacity-[0.8]
+}
+
+.bottom__doc:nth-child(2) {
+    @apply md:translate-x-[0px]
+}
+
+.bottom__logo, .bottom__doc {
+    @apply
+    text-[16px] leading-[22px]
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+
+}
+
+.contactLink {
+    @apply hidden
+}
+
+.top {
+    @apply mb-[61px]
+    xl:mb-[30px]
+    sm:mb-[25px] sm:mx-[-10px]
+}
+
+.top__text {
+    @apply text-center text-[14px] leading-[19px] font-light italic
+    xl:text-[8px] xl:leading-[11px]
+}

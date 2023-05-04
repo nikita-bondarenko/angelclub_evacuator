@@ -1,0 +1,199 @@
+.body {
+    @apply
+    md:fixed md:top-0 md:left-0 md:w-[100vw] md:h-[100vh] md:translate-y-[-110%] md:transition-all md:flex-col  md:bg-white z-20
+}
+
+.body.open {
+    @apply md:translate-y-[0]
+}
+
+.content {
+    @apply flex items-center w-full
+    md:flex-col md:bg-white  md:h-full  md:justify-center;
+}
+
+.nav {
+    @apply flex items-center gap-[25px] translate-y-[-1px]
+    2xl:gap-[20px]
+    xl:gap-[20px]
+    md:flex-col md:gap-[14px]
+}
+
+.nav__item {
+    @apply relative
+}
+
+.link {
+    @apply cursor-pointer text-[16px] font-light  relative hover:text-transparent whitespace-nowrap
+    2xl:text-[12px]
+    md:hover:text-black
+}
+
+.link.sub {
+    @apply text-[14px] leading-[19px]
+    2xl:text-[10px] 2xl:leading-[14px]
+}
+
+.link__pseudo {
+    @apply absolute inline-block  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] w-full h-full  text-[16px] font-semibold z-0  tracking-[-0.5px] opacity-0 hover:opacity-[1]
+    2xl:text-[12px] 2xl:translate-y-[-50%]
+    md:hover:opacity-0
+}
+
+.link__pseudo.sub {
+    @apply text-[14px] leading-[19px] translate-y-[-50%]
+    2xl:text-[10px] 2xl:leading-[14px]
+}
+
+.link.sub, .link__pseudo.sub {
+    @apply xl:text-[8px] xl:leading-[11px]
+    md:text-[12px] md:leading-[16px]
+    sm:text-[10px] sm:leading-[14px]
+
+}
+
+.link__text {
+    @apply text-[14px] font-light transition-all  hover:opacity-0 absolute inline-block  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full text-[14px] font-semibold z-0
+}
+
+.link__body {
+    @apply leading-[0]
+}
+
+.link, .link__pseudo {
+    @apply xl:text-[10px] xl:leading-[14px]
+    md:text-[14px] md:leading-[19px]
+    sm:text-[12px] sm:leading-[16px]
+
+}
+
+.title {
+    @apply text-[16px] cursor-default relative font-light transition-all hover:text-transparent pr-[22px] bg-[13px] bg-right relative
+    bg-no-repeat
+    2xl:text-[12px] 2xl:pr-[18px] 2xl:bg-[13px]
+    md:hover:text-black;
+}
+
+.title__arrow {
+    @apply absolute right-0 top-[5px]  w-[14px] h-[14px]
+    2xl:top-[2px]
+    xl:top-[2px] xl:right-[4px] xl:w-[12px] xl:h-[12px]
+    md:top-[5px] md:right-[2px]
+    sm:w-[10px] sm:h-[10px]
+}
+
+
+.title.open {
+    @apply text-transparent
+    md:text-black
+
+}
+
+.title__pseudo {
+    @apply absolute inline-block left-0 top-[50%] translate-y-[-45%] w-full h-full  text-[16px] font-semibold z-10 transition-all tracking-[-0.7px] opacity-0
+    2xl:text-[12px] 2xl:translate-y-[-40%]
+}
+
+.title, .title__pseudo {
+    @apply xl:text-[10px] md:text-[14px] md:leading-[19px]
+    sm:text-[12px] sm:leading-[16px]
+}
+
+
+.title__pseudo.open {
+    @apply opacity-[1]
+    md:opacity-0
+}
+
+
+.submenu {
+    @apply shadow-[1px_0px_6px_rgba(0,0,0,0.2)] py-[14px] pl-[20px] pr-[20px] rounded-[6px] absolute  left-[-15px] top-[170%] w-fit bg-white invisible opacity-0 transition-all
+    2xl:py-[8px] 2xl:pl-[15px] 2xl:pr-[20px] 2xl:left-[-13px] 2xl:rounded-[5px] 2xl:top-[150%]
+    xl:top-[130%] xl:pr-[14px] xl:pl-[8px] xl:rounded-[4px]
+    md:shadow-none md:relative md:top-auto md:left-auto md:py-0 md:pr-0 md:pl-0
+}
+
+.submenu.open {
+    @apply visible opacity-[1]
+}
+
+.submenu__list {
+    @apply list-disc list-none
+    md:absolute md:left-[-20px] md:top-0 md:mt-[14px] md:pb-[14px]
+    sm:left-[-16px] sm:top-0
+}
+
+.submenu__list.second {
+    @apply md:left-[-10px] sm:left-[-8px]
+}
+
+.submenu__content {
+    @apply xl:leading-[0px]
+}
+
+.submenu__item {
+    @apply whitespace-nowrap flex items-center
+}
+
+
+.submenu__item::before {
+    @apply content-[''] w-[3px] h-[3px] bg-black rounded-full mr-[12px] translate-y-[1px]
+    2xl:w-[2px] 2xl:h-[2px] 2xl:mr-[8px] 2xl:translate-y-[-2px]
+    xl:translate-y-[1px]
+}
+
+.submenu__item:not(:last-child) {
+    @apply mb-[12px]
+    2xl:mb-[4px]
+    md:mb-[8px]
+    sm:mb-[4px]
+
+}
+
+.title {
+    background-size: 14px;
+    background-position: right 0px top 5px;
+}
+
+@media (max-width: 1299px) {
+    .title {
+        background-size: 14px;
+        background-position: right -1px top 2px;
+    }
+
+}
+
+
+@media (max-width: 1199px) {
+    .title {
+        background-size: 12px;
+        background-position: right 4px top 2px;
+    }
+
+}
+
+
+@media (max-width: 989px) {
+    .title {
+        background-size: 12px;
+        background-position: right 1px top 5px;
+
+    }
+
+    .phone {
+        background-position: left 27px center;
+        background-size: 8px;
+    }
+}
+
+@media (max-width: 479px) {
+    .title {
+        background-size: 10px;
+    }
+
+    .phone {
+        background-position: left 27px center;
+        background-size: 8px;
+    }
+}
+

@@ -1,0 +1,20 @@
+.body {
+    @apply flex flex-wrap items-stretch justify-between gap-y-[10px]
+    2xl:gap-y-[6px]
+    md:gap-y-[4px]
+}
+
+.content {
+    @apply mb-[20px]
+    2xl:mb-[14px]
+    xl:mb-[10px]
+    md:mb-[20px]
+}
+
+.title {
+    @apply mb-[10px] font-semibold leading-[22px] font-mont text-[16px]
+    2xl:mb-[10px]  2xl:leading-[16px]  2xl:text-[12px]
+    xl:text-[10px] xl:leading-[12px] xl:mb-[6px]
+    md:text-[14px] md:leading-[17px] md:mb-[10px]
+    sm:text-[12px] sm:leading-[15px] sm:mb-[8px]
+}

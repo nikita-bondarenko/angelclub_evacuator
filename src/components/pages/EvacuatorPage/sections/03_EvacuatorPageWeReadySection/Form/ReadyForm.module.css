@@ -1,0 +1,361 @@
+.body {
+    @apply rounded-[10px]
+    xl:rounded-[4px];
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.cars {
+    @apply hidden
+    md:block
+}
+
+.top {
+    @apply px-[102px] py-[40px] pb-[60px]
+    2xl:px-[80px] 2xl:py-[30px] 2xl:pb-[40px]
+    xl:px-[64px] xl:py-[29px]
+    md:px-[32px] md:py-[25px] md:pb-[30px]
+    sm:px-[15px] sm:py-[25px]
+
+}
+
+.top__row {
+    @apply flex justify-between mb-[35px] gap-[260px]
+    xl:mb-[20px] xl:gap-[0px]
+    md:mb-[20px] md:gap-[20px] md:flex-col
+}
+
+.wheels {
+    @apply flex
+}
+
+.wheels__item {
+    @apply flex flex-col items-center gap-[12px] cursor-pointer
+    2xl:gap-[8px]
+    xl:gap-[6px]
+    md:gap-[6px]
+    sm:gap-[4px]
+}
+
+.wheels__block:not(:last-child) {
+    @apply mr-[30px]
+    2xl:mr-[20px]
+    md:mr-[20px]
+    sm:mr-[12px]
+}
+
+
+.label {
+    @apply font-semibold text-[18px] leading-[25px] mb-[16px] relative whitespace-nowrap w-fit
+    2xl:text-[14px] 2xl:leading-[19px] 2xl:mb-[14px]
+    xl:text-[12px] xl:leading-[15px] xl:mb-[10px]
+    md:text-[12px] md:leading-[16px] md:mb-[10px]
+    sm:text-[10px] sm:leading-[14px] sm:mb-[8px]
+
+}
+
+.label__simbol, .ext__symbol {
+    @apply absolute font-semibold text-[16px] flex items-center justify-center w-[30px] h-[30px] top-[-16px] right-[-42px]  bg-yellow-400 rounded-full cursor-pointer
+    2xl:w-[16px] 2xl:h-[16px] 2xl:top-[-6px] 2xl:right-[-23px]
+    xl:text-[8px]
+    md:w-[16px] md:h-[16px] md:top-[-6px] md:right-[-22px] md:text-[10px]
+    sm:w-[14px] sm:h-[14px] sm:top-[-5px] sm:right-[-17px] sm:text-[7px]
+
+}
+
+
+.text {
+    @apply font-light text-[16px] leading-[22px]
+    2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:leading-[14px]
+    md:text-[10px] md:leading-[14px]
+    sm:text-[8px] sm:leading-[11px]
+
+}
+
+.pulldown {
+    @apply absolute  transition-all opacity-0 invisible
+}
+
+.pulldown.open {
+    @apply opacity-[1] visible
+}
+
+.pulldown__wrapper {
+    @apply relative pb-[15px]
+    2xl:pb-[10px]
+}
+
+.pulldown__body {
+    @apply p-[12px] rounded-[4px] font-light text-[16px] leading-[123%] bg-gray-400 whitespace-nowrap
+    2xl:p-[7px] 2xl:rounded-[3px] 2xl:text-[14px] 2xl:leading-[123%]
+    xl:text-[10px]
+    md:text-[10px] md:leading-[12px] md:px-[8px] md:py-[6px]
+    sm:text-[8px] sm:leading-[9px] sm:px-[7px] sm:py-[5px]
+
+}
+
+.pulldown__body.high {
+    @apply whitespace-normal min-w-[500px]
+    2xl:min-w-[435px]
+    xl:min-w-[315px]
+    md:min-w-[315px]
+    sm:min-w-[200px]
+
+}
+
+.pulldown {
+    @apply left-[-67px] bottom-[34px]
+    2xl:left-[-70px] 2xl:bottom-[20px]
+    md:bottom-[16px]  md:left-[-69px]
+    sm:bottom-[13px] sm:left-[-70px]
+
+}
+
+
+.pulldown__triangle {
+    @apply left-[73px]
+}
+
+.pulldown__triangle {
+    @apply border-transparent border-x-[10px] border-t-[15px] border-t-gray-400 absolute bottom-[2px]
+    2xl:border-x-[5px] 2xl:border-t-[10px] 2xl:bottom-[0px]
+    md:border-t-[9px] md:border-x-[4px] md:bottom-[2px]
+    sm:border-t-[7px] sm:border-x-[4px] sm:bottom-[4px]
+
+}
+
+.phone {
+    @apply flex-grow-[1] max-w-[384px]
+    2xl:max-w-[260px]
+    xl:max-w-[252px]
+    md:max-w-none
+}
+
+.phone__input {
+    @apply border-[rgba(0,0,0,0.3)] rounded-[8px] py-[21px] px-[17px] text-[16px] font-semibold border-[2px] transition-all mr-[0px] w-full
+    2xl:rounded-[8px] 2xl:py-[7px] 2xl:px-[16px] 2xl:text-[12px]
+    xl:text-[10px] xl:leading-[14px] xl:rounded-[4px] xl:px-[10px] xl:border-[1px]
+    md:rounded-[4px] md:text-[10px] md:leading-[14px] md:px-[16px] md:border-[1px] md:py-[12px]
+    sm:rounded-[4px] sm:text-[8px] sm:leading-[11px] sm:px-[10px] sm:border-[1px] sm:py-[7px]
+
+
+}
+
+.phone.first {
+    @apply md:hidden
+}
+
+.phone.second {
+    @apply hidden md:block
+}
+
+.phone__input::placeholder {
+    @apply text-[rgba(0,0,0,0.3)]
+}
+
+.phone__input.invalid {
+    @apply border-red-500
+}
+
+.ext {
+    @apply md:mb-[20px]
+}
+
+/*.ext__item:nth-child(3) {*/
+/*    @apply sm:translate-y-[-5px]*/
+/*}*/
+
+/*.ext__item:nth-child(5) {*/
+/*    @apply sm:translate-y-[-10px]*/
+/*}*/
+
+/*.ext__item:nth-child(7) {*/
+/*    @apply sm:translate-y-[-15px]*/
+/*}*/
+
+.ext__list {
+    @apply grid grid-cols-[1fr,380px]
+        /*flex justify-between*/
+    gap-y-[12px] flex-wrap
+    xl:grid-cols-[1fr,250px]
+    md:gap-y-[9px] md:grid-cols-[143px,1fr] md:gap-x-[27px]
+    sm:grid-cols-[140px,1fr] sm:gap-x-[25px]
+}
+
+.ext__label {
+    @apply flex gap-[12px] cursor-pointer
+    2xl:gap-[8px]
+}
+
+
+.ext__text {
+    @apply relative flex items-center
+}
+
+.ext__text .ext__text {
+    @apply inline
+}
+
+.ext__text.emphasised {
+    @apply underline underline-offset-1 text-[rgba(0,0,0,0.6)] relative
+}
+
+.ext__item:last-child {
+    @apply  sm:mt-[12px]
+}
+
+.ext__wrapper {
+    @apply absolute top-[120%] left-0 w-[384px] overflow-hidden
+    xl:w-[252px] xl:top-[100%]
+    md:w-[202px]
+    sm:w-[118px]
+}
+
+.ext__input {
+    @apply py-[8px] px-[0px] w-full text-[16px] leading-[22px] font-semibold border-b-[1px] translate-y-[-150%] border-black opacity-[0.7]
+    xl:text-[10px] xl:leading-[14px] xl:py-[4px]
+    sm:text-[8px] sm:leading-[11px] sm:py-[3px]
+    ;
+    transition: transform .7s ease-in-out, opacity .3s ease-in-out;
+}
+
+.ext__input.open {
+    @apply translate-y-0
+}
+
+.ext__input:focus-visible {
+    @apply opacity-[1]
+}
+
+.ext__input::placeholder {
+    @apply font-light text-black
+}
+
+.ext__item {
+    @apply relative
+}
+
+/*.ext__item:nth-child(1), .ext__item:nth-child(3) {*/
+/*    @apply mr-[300px]*/
+/*    md:mr-[20px]*/
+/*}*/
+
+/*.ext__item:nth-child(2), .ext__item:nth-child(4) {*/
+/*    @apply mr-[51px]*/
+/*    2xl:mr-[20px]*/
+/*    md:mr-[0px] md:max-w-[140px]*/
+/*    sm:mr-[0px] sm:max-w-[120px]*/
+
+/*}*/
+
+/*.ext__item:nth-child(2) .ext__label, .ext__item:nth-child(4) .ext__label {*/
+/*    @apply md:items-start*/
+/*}*/
+
+/*.ext__item:nth-child(3) {*/
+/*    @apply md:translate-y-[-10px]*/
+/*}*/
+
+/*.ext__item:nth-child(5) {*/
+/*    @apply md:translate-y-[-20px]*/
+/*}*/
+
+.ext__accent {
+    @apply font-semibold
+}
+
+.bottom {
+    @apply bg-gray-400 rounded-b-[10px] flex justify-between
+    xl:rounded-b-[4px]
+    md:items-center md:flex-wrap
+}
+
+.bottom__amount {
+    @apply px-[80px] flex items-center gap-[8px]
+    px-[102px] gap-[12px]
+    xl:px-[64px] xl:gap-[6px]
+    md:px-[20px] md:gap-[6px] md:py-[20px]
+    sm:px-[15px] sm:gap-[6px] sm:py-[15px]
+
+}
+
+.amount__text {
+    @apply text-[16px] font-semibold
+    2xl:text-[12px]
+    xl:text-[10px]
+    sm:text-[8px]
+
+}
+
+.amount__value {
+    @apply text-[18px] font-semibold
+    2xl:text-[14px]
+    xl:text-[12px]
+    sm:text-[10px]
+}
+
+.bottom__link_wrapper {
+    @apply flex items-center
+    md:w-full
+}
+
+.bottom__link {
+    @apply mr-[60px] underline text-[16px] leading-[22px] transition-all hover:opacity-[0.8] h-fit
+    2xl:mr-[20px] 2xl:text-[12px] 2xl:leading-[16px]
+    xl:text-[10px] xl:mr-[50px]
+    md:mr-[30px] md:text-[10px] md:pl-[16px]
+    sm:mr-[20px] sm:text-[8px] sm:pl-[14px]
+
+}
+
+@media (max-width: 989px) {
+    .bottom__link {
+        /*background: no-repeat center left / contain url('/images/phone.svg');*/
+        background-size: 10px;
+        background-position-y: 4px;
+    }
+}
+
+
+@media (max-width: 479px) {
+    .bottom__link {
+        /*background: no-repeat center left / contain url('/images/phone.svg');*/
+        background-size: 8px;
+        background-position-y: 5px;
+    }
+}
+
+
+.bottom__link.second {
+    @apply md:hidden
+}
+
+.bottom__link.first {
+    @apply hidden md:block
+}
+
+.bottom__button_section {
+    @apply relative
+    md:w-full
+
+}
+
+.error {
+    @apply absolute bottom-[-25px] left-[50%] translate-x-[-50%] text-red-500 transition-all opacity-0 whitespace-nowrap
+    md:text-[10px] md:leading-[14px] md:bottom-[-16px]
+}
+
+.error.visible {
+    @apply opacity-[1]
+}
+
+
+.bottom__button {
+    @apply py-[20px] px-[42px] bg-yellow-400 hover:bg-yellow-500 transition-colors font-bold text-[16px]
+    2xl:py-[12px] 2xl:px-[35px] 2xl:text-[12px]
+    xl:px-[16px] xl:pt-[11px] xl:pb-[9px] xl:text-[10px] xl:leading-[14px]
+    md:w-full md:py-[14px] md:text-[10px] md:leading-[14px]
+    sm:w-full sm:py-[9px] sm:text-[8px] sm:leading-[11px]
+
+}

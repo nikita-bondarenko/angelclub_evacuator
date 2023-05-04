@@ -1,0 +1,44 @@
+.body {
+    @apply py-[60px] flex justify-between flex-wrap
+    xl:py-[30px]
+    md:py-[32px] md:gap-y-[60px]
+    sm:py-[25px] sm:gap-y-[40px]
+}
+
+.item {
+    @apply flex flex-col w-[260px] items-center
+    xl:w-[168px]
+    md:w-[204px]
+    sm:w-[142px]
+}
+
+.item__image {
+    @apply w-[73px] h-[73px] mb-[13px]
+    xl:w-[45px] xl:h-[45px] mb-[9.5px]
+    md:w-[48px] md:h-[48px]
+    sm:w-[35px] sm:h-[35px]
+
+}
+
+.item__title {
+    @apply mb-[12px] text-center
+    xl:mb-[5.5px]
+    md:mb-[8px]
+    sm:mb-[6px]
+}
+
+.item__text {
+    @apply text-center whitespace-normal
+}
+
+.item:first-child .item__text {
+    @apply max-w-[220px]
+    xl:max-w-[140px]
+    md:max-w-full
+    sm:max-w-[140px]
+
+}
+
+.item:first-child  .item__title {
+    @apply sm:max-w-[100px]
+}
