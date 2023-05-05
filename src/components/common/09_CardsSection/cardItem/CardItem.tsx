@@ -70,7 +70,7 @@ const CardItemComponent = memo(({props, index} : CardItemProps) => {
                 }
 
                 <div className={styles.card__col}>
-                    <h4 className={styles.card__price}>{props?.cardsItemStoimost?.toLocaleString('ru')} руб.</h4>
+                    <h4 className={styles.card__price}>{props?.cardsItemStoimostPokupki?.toLocaleString('ru')} руб.</h4>
                     <span className={styles.card__time}>в {props?.cardsItemPeriod}</span>
                 </div>
                 <ul className={styles.card__list}>
@@ -93,7 +93,7 @@ const CardItemComponent = memo(({props, index} : CardItemProps) => {
                                                 </div>
                                             </span>}
                             {(item?.cardsItemOstavshijsyaTekstElementa || item?.cardsListTekstElementa) && <span className={styles.list__text}
-                                   dangerouslySetInnerHTML={{__html: item?.cardsItemOstavshijsyaTekstElementa || item?.cardsListTekstElementa}}></span>}</div>
+                                                                                                                 dangerouslySetInnerHTML={{__html: item?.cardsItemOstavshijsyaTekstElementa || item?.cardsListTekstElementa}}></span>}</div>
                     </li>)}
 
                 </ul>

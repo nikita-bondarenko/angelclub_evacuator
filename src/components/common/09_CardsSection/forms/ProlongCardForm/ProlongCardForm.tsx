@@ -62,7 +62,7 @@ const ProlongCardForm = () => {
     }, [mailId])
 
     useEffect(() => {
-        if (selectedCardType) setPrice(selectedCardType?.price)
+        if (selectedCardType) setPrice(selectedCardType?.priceProlong)
     }, [selectedCardType])
 
     useEffect(() => {

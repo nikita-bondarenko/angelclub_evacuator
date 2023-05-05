@@ -115,7 +115,8 @@ export type SearchItem = {
 export type CardType = {
     id: number,
     name: string,
-    price: number
+    price: number,
+    priceProlong: number,
 }
 
 export const getCardTypes = (list?: Queries.WpPage_Cards_cardsSpisokKart[]): [CardType[]] => {
@@ -130,7 +131,8 @@ export const getCardTypes = (list?: Queries.WpPage_Cards_cardsSpisokKart[]): [Ca
             const items: CardType[] | undefined = cards?.cards?.cardsSpisokKart?.map((item, index) => ({
                 id: index + 1,
                 name: item?.cardsItemNazvanieKarty,
-                price: item?.cardsItemStoimost
+                price: item?.cardsItemStoimostPokupki,
+                priceProlong: item?.cardsItemStoimostProlong
             }))
             items && setCardTypes(items)
 

@@ -132,7 +132,7 @@ export const query = graphql`  query EvacuatorPage {
                 }
             }
         }
-
+  
         metaData {
             metaTitle
             metaDescription
@@ -154,7 +154,8 @@ export const query = graphql`  query EvacuatorPage {
                 cardsSpisokKart {
                     cardsItemNazvanieKarty
                     cardsItemPeriod
-                    cardsItemStoimost
+                    cardsItemStoimostPokupki 
+                    cardsItemStoimostProlong
                     cardsItemTekstKnopki
                     cardsItemOpisanie {
                         cardsItemEstTekstDlyaKotorogoNuzhnaPodskazka
@@ -201,7 +202,7 @@ export const query = graphql`  query EvacuatorPage {
                 onlineTekst
                 onlineHrefSsylki
             }
-
+      
             footer {
                 tekstLogo
                 footerPlaceKoordinatyCzentraKarty
