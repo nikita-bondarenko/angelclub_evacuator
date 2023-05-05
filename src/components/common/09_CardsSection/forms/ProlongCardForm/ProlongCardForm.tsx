@@ -37,7 +37,6 @@ const ProlongCardForm = () => {
     const [mailBody, setMailBody] = useState<string>('')
     const [mailId, setMailId] = useState<string>('')
     const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
-    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
 
     const setId = () => {
         const id = uniqid(ID_PREFIX)
@@ -90,7 +89,6 @@ const ProlongCardForm = () => {
     const submitHandler = () => {
         if (!isFormInvalid) {
             mutation()
-            mutation2()
             setIsSubmit(true)
         }
     }

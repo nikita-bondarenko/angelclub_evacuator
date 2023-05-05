@@ -233,7 +233,6 @@ const NewCardForm = () => {
     const [mailId,setMailId] = useState<string>(``)
 
     const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
-    const [mutation2] = useMutation(sendCustomMail({mailTo: EMAIL_SECOND, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
 
     const setMailData = () => {
 
@@ -285,8 +284,7 @@ const NewCardForm = () => {
         setMailData()
     }, [cardInputs])
     const successSubmit = () => {
-        mutation().then(res => console.log(res))
-        mutation2()
+        mutation()
         setIsFormInvalid(false)
         setIsNewCardModalOpen(false)
         // @ts-ignore
