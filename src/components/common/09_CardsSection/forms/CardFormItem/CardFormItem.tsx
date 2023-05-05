@@ -56,6 +56,8 @@ const CardFormItem = ({name, type}: CardFormItemProps) => {
         setSelectedCardType(card)
     }
 
+
+
     return (
         <div className={styles.content}>
             <h2 className={styles.title}>{name}</h2>

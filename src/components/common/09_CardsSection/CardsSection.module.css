@@ -3,11 +3,15 @@
     @apply relative
 }
 
+.wrapper {
+    @apply block z-20
+}
+
 
 .background {
     @apply
     bg-yellow-400
-    bg-contain z-10
+    bg-contain 
         bg-repeat-y
     mb-[140px]
     2xl:mb-[130px]
@@ -20,7 +24,7 @@
 }
 
 .body {
-    @apply py-[60px] flex flex-col items-center
+    @apply py-[60px] z-20 flex flex-col items-center
     2xl:py-[40px]
     xl:py-[30px]
     md:px-[70px]

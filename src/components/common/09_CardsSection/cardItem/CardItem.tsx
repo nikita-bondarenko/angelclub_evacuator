@@ -93,7 +93,7 @@ const CardItemComponent = memo(({props, index} : CardItemProps) => {
                                                 </div>
                                             </span>}
                             {(item?.cardsItemOstavshijsyaTekstElementa || item?.cardsListTekstElementa) && <span className={styles.list__text}
-                                                                                                                 dangerouslySetInnerHTML={{__html: item?.cardsItemOstavshijsyaTekstElementa || item?.cardsListTekstElementa}}></span>}</div>
+                                   dangerouslySetInnerHTML={{__html: item?.cardsItemOstavshijsyaTekstElementa || item?.cardsListTekstElementa}}></span>}</div>
                     </li>)}
 
                 </ul>

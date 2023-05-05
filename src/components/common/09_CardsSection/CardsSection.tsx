@@ -1,26 +1,26 @@
-import React, {createRef, memo, useEffect, useLayoutEffect, useMemo, useState} from 'react';
+import React, { createRef, memo, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import * as styles from './CardsSection.module.css'
-import NewCardForm, {CardInputItem} from "./forms/NewCardForm/NewCardForm";
-import {CardContext, CardContextType} from "./context";
-import {CardItem, cards, CardType, getCardTypes, CarMark, CarModel, getCarBirthYears, SearchItem} from "./config";
-import {InView} from 'react-intersection-observer';
-import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
+import NewCardForm, { CardInputItem } from "./forms/NewCardForm/NewCardForm";
+import { CardContext, CardContextType } from "./context";
+import { CardItem, cards, CardType, getCardTypes, CarMark, CarModel, getCarBirthYears, SearchItem } from "./config";
+import { InView } from 'react-intersection-observer';
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import BackgroundImage from "gatsby-background-image";
 import ProlongCardForm from "./forms/ProlongCardForm/ProlongCardForm";
-import {useGlobalContext} from "../../../context/context";
-import {stack} from "../../../hooks/useClassName";
-import {useGatsbyBgImage} from "../../../hooks/useGatsbyBgImage";
-import {useGatsbyImage} from "../../../hooks/useGatsbyImage";
+import { useGlobalContext } from "../../../context/context";
+import { stack } from "../../../hooks/useClassName";
+import { useGatsbyBgImage } from "../../../hooks/useGatsbyBgImage";
+import { useGatsbyImage } from "../../../hooks/useGatsbyImage";
 import Modal from "../../modal/Modal";
-import {Car} from "../../pages/EvacuatorPage/sections/03_EvacuatorPageWeReadySection/Cars/Cars";
-import {useWpCommonSection} from "../../../hooks/useWpCommonSection";
+import { Car } from "../../pages/EvacuatorPage/sections/03_EvacuatorPageWeReadySection/Cars/Cars";
+import { useWpCommonSection } from "../../../hooks/useWpCommonSection";
 import CardItemComponent from "./cardItem/CardItem";
 
 type CardsSectionProps = {
     pageName?: 'main' | 'evacuator' | 'techhelp',
     title?: string
 }
-const CardsSection = ({pageName, title}: CardsSectionProps) => {
+const CardsSection = ({ pageName, title }: CardsSectionProps) => {
 
     const [selectedCard, setSelectedCard] = useState<Queries.WpCommonSections_Cards_cardsSpisokKart>()
     const [isNewCardModalOpen, setIsNewCardModalOpen] = useState<boolean>(false)
@@ -329,7 +329,6 @@ const CardsSection = ({pageName, title}: CardsSectionProps) => {
     const [bgImage] = useGatsbyBgImage('print')
 
     const prolongButtonHandler = () => {
-        cardTypes && cardTypes[0] && setSelectedCardType(cardTypes[0])
         setIsProlongCardModalOpen(true)
     }
 
@@ -355,53 +354,72 @@ const CardsSection = ({pageName, title}: CardsSectionProps) => {
         }
     }, [cardsSection])
 
+    useEffect(() => {
+        window.addEventListener('hashchange', (e) => {
+            if (e.newURL.includes('prolong')) {
+                location.hash = 'prolongopen'
+                setIsProlongCardModalOpen(true)
+            }
+        })
+    }, [])
+
+    useEffect(() => {
+        if (isProlongCardModalOpen) {
+            cardTypes && cardTypes[0] && setSelectedCardType(cardTypes[0])
+        }
+    }, [isProlongCardModalOpen])
+
     // console.log(bgImage)
     if (!bgImage) return null
     return (
         <CardContext.Provider value={contextValue}>
-            <BackgroundImage  onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} Tag={'section'} {...bgImage}
-                             className={stack(styles.background, 'section-indent')} id={'cards'}
-                             preserveStackingContext>
+            <BackgroundImage onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} Tag={'section'} {...bgImage}
+                className={stack(styles.background, 'section-indent')} id={'cards'}
+                preserveStackingContext>
                 <InView onChange={(inView, entry) => setIsTopInView(inView)}></InView>
+
                 <div id={'cards'} className={['container', styles.body].join(' ')}>
-                    {!title ? <h2 className={styles.title} dangerouslySetInnerHTML={{__html: cardsSection?.cards?.cardsZagolovok}}></h2> : <h2 className={styles.title} dangerouslySetInnerHTML={{__html: title}}></h2>}
+                    {!title ? <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: cardsSection?.cards?.cardsZagolovok }}></h2> : <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h2>}
                     {cardsSection?.cards?.cardsPodzagolovok && <p className={styles.text}
-                        dangerouslySetInnerHTML={{__html: cardsSection?.cards?.cardsPodzagolovok}}></p>}
-                    <div ref={swiper} style={isMobile ? {height} : {}} className={styles.cards}>
+                        dangerouslySetInnerHTML={{ __html: cardsSection?.cards?.cardsPodzagolovok }}></p>}
+                    <div ref={swiper} style={isMobile ? { height } : {}} className={styles.cards}>
                         <button onClick={toNextCard}
-                                className={[styles.cards__next, activeCard < cards.length ? styles.visible : ''].join(' ')}>
-                            <StaticImage className={styles.cards__arrow} src="./images/card-arrow-next.png" alt=""/>
+                            className={[styles.cards__next, activeCard < cards.length ? styles.visible : ''].join(' ')}>
+                            <StaticImage className={styles.cards__arrow} src="./images/card-arrow-next.png" alt="" />
                         </button>
                         <button onClick={toPrevCard}
-                                className={[styles.cards__prev, left < 0 ? styles.visible : ''].join(' ')}>
-                            <StaticImage className={styles.cards__arrow} src="./images/card-arrow-prev.png" alt=""/>
+                            className={[styles.cards__prev, left < 0 ? styles.visible : ''].join(' ')}>
+                            <StaticImage className={styles.cards__arrow} src="./images/card-arrow-prev.png" alt="" />
                         </button>
-                        <ul style={{left}} ref={list}
+                        <ul style={{ left }} ref={list}
                             className={[styles.cards__wrapper, isTouching ? styles.nosmooth : '', isDesktop ? 'container' : ''].join(' ')}>
                             {cardsData && cardsData?.map((props, index) => <CardItemComponent
-                                key={props.cardsItemStoimost} index={index} props={props}></CardItemComponent>)}
+                                key={index} index={index} props={props}></CardItemComponent>)}
                         </ul>
                     </div>
-                   <div className={styles.bottom}>
+                    <div className={styles.bottom}>
                         <button onClick={prolongButtonHandler}
-                                className={styles.bottom__link}>{cardsSection?.cards?.cardsTekstKnopkiPodKartami}
+                            className={styles.bottom__link}>{cardsSection?.cards?.cardsTekstKnopkiPodKartami}
                         </button>
                         {/*{pageName === 'evacuator' &&*/}
                         {/*    <a href={'https://www.angelclub.ru'} target={'_blank'} className={styles.bottom__link}>Узнайте*/}
                         {/*        подробнее</a>}*/}
                         <InView onChange={(inView, entry) => setIsBottomInView(inView)}></InView>
-                        {(cardsSection?.cards?.cardsTekst &&  pageName !== 'techhelp') && <p className={styles.bottom__desc}
-                                                               dangerouslySetInnerHTML={{__html: cardsSection?.cards?.cardsTekst}}>
+                        {(cardsSection?.cards?.cardsTekst && pageName !== 'techhelp') && <p className={styles.bottom__desc}
+                            dangerouslySetInnerHTML={{ __html: cardsSection?.cards?.cardsTekst }}>
                         </p>}
                     </div>
                 </div>
-                <Modal isBackTransparent={true} isOpen={isNewCardModalOpen} setIsOpen={setIsNewCardModalOpen}>
-                    <NewCardForm></NewCardForm>
-                </Modal>
-                <Modal isBackTransparent={true} isOpen={isProlongCardModalOpen}
-                       setIsOpen={setIsProlongCardModalOpen}>
-                    <ProlongCardForm></ProlongCardForm>
-                </Modal>
+                <div className={styles.wrapper}>
+                    <Modal isBackTransparent={true} isOpen={isNewCardModalOpen} setIsOpen={setIsNewCardModalOpen}>
+                        <NewCardForm></NewCardForm>
+                    </Modal>
+                    <Modal isBackTransparent={true} isOpen={isProlongCardModalOpen}
+                        setIsOpen={setIsProlongCardModalOpen}>
+                        <ProlongCardForm></ProlongCardForm>
+                    </Modal>
+                </div>
+
             </BackgroundImage>
         </CardContext.Provider>
     );

@@ -53,7 +53,7 @@ const NavigationLink = ({link, isSubmenu, className}: NavigationLinkProps) => {
 
 
         ref.current && setSubmenuHeight(ref.current?.clientHeight)
-        setIsContactLink(link.url === '#contacts')
+        setIsContactLink(link.url.includes('#'))
     }, [])
 
     useEffect(() => {

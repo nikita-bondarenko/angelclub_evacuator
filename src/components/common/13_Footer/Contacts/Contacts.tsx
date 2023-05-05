@@ -46,12 +46,14 @@ const SocialListItem = ({footerSocialHrefSsylki, footerSocialTekstSsylki, footer
 }
 
 const NavItem = ({label, childItems, url}: AllWpMenuItemNode) => {
+
+   
     return <li className={styles.nav__item}>
-        {childItems?.nodes.length ? <h3 className={stack(styles.nav__main, styles.nav__title)}>{label}</h3> : <a className={stack(styles.nav__main, styles.nav__link)} href={url}>{label}</a>}
+        {childItems?.nodes.length ? <h3 className={stack(styles.nav__main, styles.nav__title)}>{label}</h3> : <a target={!url.includes('#') ? '_blank' : '_self'} className={stack(styles.nav__main, styles.nav__link)} href={url}>{label}</a>}
         {!!childItems?.nodes.length && <ul className={styles.nav__subList}>
             {
                 childItems?.nodes.map(({url, label}, index) => <li key={index} className={styles.nav__subItem}>
-                <a className={stack(styles.nav__sub, styles.nav__link)} href={url}>{label}</a>
+                <a target={url.includes('#') ?  '_self' : '_blank'}  className={stack(styles.nav__sub, styles.nav__link)} href={url}>{label}</a>
             </li>)}
         </ul>}
     </li>
