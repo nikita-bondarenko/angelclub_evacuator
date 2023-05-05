@@ -1,12 +1,12 @@
-import React, {createRef, Dispatch, SetStateAction, useEffect, useLayoutEffect, useState} from 'react';
-import {NavLink} from "../config";
+import React, { createRef, Dispatch, SetStateAction, useEffect, useLayoutEffect, useState } from 'react';
+import { NavLink } from "../config";
 import * as styles from './Navigation.module.css'
 import PhoneButton from "../PhoneButton/PhoneButton";
-import {useGlobalContext} from "../../../../context/context";
+import { useGlobalContext } from "../../../../context/context";
 import arrow from '../images/nav-arrow.svg'
-import {AllWpMenuItemNode} from "../../../../types/types";
-import {usePost} from "../../../../hooks/usePost";
-import {withAssetPrefix} from "gatsby";
+import { AllWpMenuItemNode } from "../../../../types/types";
+import { usePost } from "../../../../hooks/usePost";
+import { withAssetPrefix } from "gatsby";
 
 type NavigationProps = {
     isOpen?: boolean,
@@ -23,10 +23,11 @@ type Props = {
     [key: string]: () => void
 }
 
-const NavigationLink = ({link, isSubmenu, className}: NavigationLinkProps) => {
+const NavigationLink = ({ link, isSubmenu, className }: NavigationLinkProps) => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isContactLink, setIsContactLink] = useState(false)
+    const [isHashLink, setIsHashLink] = useState(false)
     const [submenuHeight, setSubmenuHeight] = useState(0)
     const {
         setIsNavOpen,
@@ -53,7 +54,8 @@ const NavigationLink = ({link, isSubmenu, className}: NavigationLinkProps) => {
 
 
         ref.current && setSubmenuHeight(ref.current?.clientHeight)
-        setIsContactLink(link.url.includes('#'))
+        setIsHashLink(link.url.includes('#'))
+        setIsContactLink(link.url === '#contacts')
     }, [])
 
     useEffect(() => {
@@ -74,7 +76,7 @@ const NavigationLink = ({link, isSubmenu, className}: NavigationLinkProps) => {
     const clickHandler = (e: React.MouseEvent) => {
         if (isContactLink && isMobile) {
             e.preventDefault()
-            window.scrollTo({top: pageHeight, behavior: "smooth"})
+            window.scrollTo({ top: pageHeight, behavior: "smooth" })
         }
         setIsNavOpen(false)
 
@@ -84,24 +86,24 @@ const NavigationLink = ({link, isSubmenu, className}: NavigationLinkProps) => {
         <div {...props} className={[className || '', styles.link__body].join(' ')}>
             {!link.url.includes('null')
                 ?
-                <a onClick={clickHandler} target={!isContactLink ? '_blank' : '_self'}
-                   className={[styles.link, isSubmenu ? styles.sub : ''].join(' ')}
-                   href={isContactLink ? link.url : isBottomAvailable ? link.url : '#cards'}>{link.label}
+                <a onClick={clickHandler} target={!isHashLink ? '_blank' : '_self'}
+                    className={[styles.link, isSubmenu ? styles.sub : ''].join(' ')}
+                    href={!isContactLink ? link.url : isBottomAvailable ? link.url : '#cards'}>{link.label}
                     <span
                         className={[styles.link__pseudo, isSubmenu ? styles.sub : ''].join(' ')}>{link.label}</span>
                 </a>
                 :
                 <span className={[styles.title, isOpen ? styles.open : ''].join(' ')}>{link.label}
                     <span className={[styles.title__pseudo, isOpen ? styles.open : ''].join(' ')}>{link.label}</span>
-                    <img className={styles.title__arrow} src={arrow} alt=""/>
+                    <img className={styles.title__arrow} src={arrow} alt="" />
                 </span>}
-            {!!link.childItems.nodes.length && <div style={isMobile ? {height: isOpen ? submenuHeight : 0} : {}}
-                              className={[styles.submenu, isOpen ? styles.open : ''].join(' ')}>
+            {!!link.childItems.nodes.length && <div style={isMobile ? { height: isOpen ? submenuHeight : 0 } : {}}
+                className={[styles.submenu, isOpen ? styles.open : ''].join(' ')}>
                 <ul ref={ref} className={[styles.submenu__list, link.label === 'Автосервис' ? styles.second : ''].join(' ')}>
                     {link.childItems.nodes.map(item =>
                         <li key={item.url} className={styles.submenu__item}>
                             <NavigationLink className={styles.submenu__content} isSubmenu={true}
-                                            link={item}></NavigationLink>
+                                link={item}></NavigationLink>
                         </li>)
                     }
                 </ul>
@@ -109,9 +111,9 @@ const NavigationLink = ({link, isSubmenu, className}: NavigationLinkProps) => {
         </div>
     )
 }
-const Navigation = ({ isOpen}: NavigationProps) => {
+const Navigation = ({ isOpen }: NavigationProps) => {
 
-    const {data: {allWpMenuItem: { nodes: links}}} = useGlobalContext()
+    const { data: { allWpMenuItem: { nodes: links } } } = useGlobalContext()
 
 
 
