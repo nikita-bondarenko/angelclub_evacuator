@@ -58,8 +58,8 @@ const ProlongCardForm = () => {
     }, [])
 
     useEffect(() => {
-        if (mailId) setSubmitDescription(`Оплата заказа ${mailId}`)
-    }, [mailId])
+        if (mailId && phone) setSubmitDescription(`Оплата заказа ${mailId}, ${phone}`)
+    }, [mailId, phone])
 
     useEffect(() => {
         if (selectedCardType) setPrice(selectedCardType?.priceProlong)
@@ -88,8 +88,8 @@ const ProlongCardForm = () => {
 
     const submitHandler = () => {
         if (!isFormInvalid) {
-            mutation()
-            setIsSubmit(true)
+            mutation().then(res => { setIsSubmit(true)})
+
         }
     }
 
@@ -102,7 +102,7 @@ const ProlongCardForm = () => {
             <div className={styles.content}>
                 <CardFormInput value={selectedCardType?.name} items={cardTypes} setValue={selectChangeHandle}
                                type={'select'} label={'Тариф карты'}></CardFormInput>
-                <CardFormInput isLight={isNameInvalid} value={name} setValue={value => value && setName(value)}
+                <CardFormInput isLight={isNameInvalid} value={name} setValue={value => value ? setName(value) : setName('')}
                                type={'text'} label={'ФИО'}></CardFormInput>
                 <CardFormInput isLight={isPhoneInvalid} value={phone} setValue={value => value && setPhone(value)}
                                type={'phone'} label={'Телефон'}></CardFormInput>

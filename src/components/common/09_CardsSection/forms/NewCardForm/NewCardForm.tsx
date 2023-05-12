@@ -1,18 +1,18 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import * as styles from './NewCardForm.module.css'
 
 import CardFormItem from "../CardFormItem/CardFormItem";
-import {useCardContext} from "../../context";
+import { useCardContext } from "../../context";
 import CardCheckbox from "../CardCheckbox/CardCheckbox";
-import {CardType, CarMark, CarModel, SearchItem} from "../../config";
-import {useGlobalContext} from "../../../../../context/context";
+import { CardType, CarMark, CarModel, SearchItem } from "../../config";
+import { useGlobalContext } from "../../../../../context/context";
 import Payment from '../../../Payment/Payment';
-import {v4} from "uuid";
-import {useMutation} from "@apollo/client";
-import {gql} from "apollo-boost";
-import {EMAIL, EMAIL_FROM, EMAIL_SECOND, ID_PREFIX, MODAL_SEARCH} from "../../../../../config";
+import { v4 } from "uuid";
+import { useMutation } from "@apollo/client";
+import { gql } from "apollo-boost";
+import { EMAIL, EMAIL_FROM, EMAIL_SECOND, ID_PREFIX, MODAL_SEARCH } from "../../../../../config";
 import uniqid from "uniqid";
-import {sendCustomMail} from "../../../../../mutations/sendCustomMail";
+import { sendCustomMail } from "../../../../../mutations/sendCustomMail";
 
 export type CardInputItem = {
     id: number,
@@ -36,7 +36,7 @@ export type CardInputItem = {
 }
 
 const cardInputsInit: CardInputItem[] = [
-    {id: 1, sectionId: 'first', isBlocked: false, isInvalid: false, placeholder: 'Имя', type: 'text', key: 'name'},
+    { id: 1, sectionId: 'first', isBlocked: false, isInvalid: false, placeholder: 'Имя', type: 'text', key: 'name' },
     {
         id: 2,
         sectionId: 'first',
@@ -230,9 +230,9 @@ const NewCardForm = () => {
     const [successUrl, setSuccessUrl] = useState<string>('https://angel-frontend.testingplace.ru#cards')
     const [mailSubject, setMailSubject] = useState<string>(``)
     const [mailBody, setMailBody] = useState<string>(``)
-    const [mailId,setMailId] = useState<string>(``)
+    const [mailId, setMailId] = useState<string>(``)
 
-    const [mutation] = useMutation(sendCustomMail({mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject}))
+    const [mutation] = useMutation(sendCustomMail({ mailTo: EMAIL, mailFrom: EMAIL_FROM, body: mailBody, subject: mailSubject }))
 
     const setMailData = () => {
 
@@ -278,29 +278,33 @@ const NewCardForm = () => {
     }
     useEffect(() => {
         setId()
-    },[])
+        setSuccessUrl(location.href + '?' + MODAL_SEARCH + '#cards')
 
-    useEffect(() =>{
-        setMailData()
-    }, [cardInputs])
-    const successSubmit = () => {
-        mutation()
-        setIsFormInvalid(false)
-        setIsNewCardModalOpen(false)
-        // @ts-ignore
-        setPrice(selectedCardType?.price)
-        setSuccessUrl(location.href  + '?' + MODAL_SEARCH + '#cards')
-        setSubmitDescription(`Оплата заказа ${mailId}`)
-
-
-    }
+    }, [])
 
     useEffect(() => {
-        if (price && submitDescription && successUrl) {
+        if (selectedCardType) setPrice(selectedCardType?.price)
+    }, [selectedCardType])
+
+    useEffect(() => {
+        const phone = JSON.parse(cardInputs).find((item: CardInputItem) => item.key === 'phone')
+
+        if (mailId && phone.value) setSubmitDescription(`Оплата заказа ${mailId}, ${phone.value}`)
+    }, [mailId, cardInputs])
+
+    useEffect(() => {
+        setMailData()
+    }, [cardInputs])
+
+
+    const successSubmit = () => {
+        mutation().then(() => {
+
             setIsSubmit(true)
 
-        }
-    }, [price, submitDescription, successUrl])
+        })
+        setIsFormInvalid(false)
+    }
 
     const submitHandler = () => {
         const inputArr: CardInputItem[] = JSON.parse(cardInputs)
