@@ -21,16 +21,20 @@ const FooterNav = () => {
             setLinks(array)
         }
     }, [data])
+
+    useEffect(() => {
+        console.log(section)
+    }, [section])
     return (
         <div className={['container', styles.body].join(' ')}>
             <div className={styles.top}>
                 <p className={styles.top__text} dangerouslySetInnerHTML={{__html: section?.footer?.footerRemarka}}></p>
             </div>
             <div className={styles.bottom}>
-                {section?.footer?.polzovatelskoeSoglashenie?.publicUrl && <a href={withAssetPrefix(section?.footer?.polzovatelskoeSoglashenie?.publicUrl)}
+                {section?.footer?.polzovatelskoeSoglashenie?.localFile?.publicURL && <a href={withAssetPrefix(section?.footer?.polzovatelskoeSoglashenie?.localFile?.publicURL)}
                     className={styles.bottom__doc}
                     target={'_blank'}>Пользовательское соглашение</a>}
-                {section?.footer?.politikaKonfidenczialnosti?.publicUrl && <a href={withAssetPrefix(section?.footer?.politikaKonfidenczialnosti?.publicUrl)}
+                {section?.footer?.politikaKonfidenczialnosti?.localFile?.publicURL && <a href={withAssetPrefix(section?.footer?.politikaKonfidenczialnosti?.localFile?.publicURL)}
                     className={styles.bottom__doc}
                     target={'_blank'}>Политика конфиденциальности</a>}
                 <span className={styles.bottom__logo} dangerouslySetInnerHTML={{__html: section?.footer?.tekstLogo}}></span>

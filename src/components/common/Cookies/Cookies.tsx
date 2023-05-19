@@ -17,7 +17,7 @@ const [section] = useWpCommonSection('cookies')
     return (
         <div className={[styles.body, isOpen ? styles.open : ''].join(' ')}>
             <div className={['container', styles.content].join(' ')}>
-                <p className={styles.text}><a className={styles.link} href={section?.cookies?.cookiesPolitikaKonfidenczialnosti?.publicUrl} target={'_blank'}>{section?.cookies?.cookiesTekstSsylki}</a>{section?.cookies?.cookiesTekst}</p>
+                <p className={styles.text}><a className={styles.link} href={section?.cookies?.cookiesPolitikaKonfidenczialnosti?.localFile?.publicURL} target={'_blank'}>{section?.cookies?.cookiesTekstSsylki}</a>{section?.cookies?.cookiesTekst}</p>
                 <button onClick={toggleIsOpen} className={styles.button}>
                     {section?.cookies?.cookiesTekstKnopki}
                 </button>

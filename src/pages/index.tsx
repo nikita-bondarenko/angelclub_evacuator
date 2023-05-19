@@ -22,7 +22,7 @@ function Index({data}: PageProps<Queries.EvacuatorPageQuery> ) {
     const state = globalState(data)
     return (
         <GlobalContext.Provider  value={state}>
-            <Layout>
+            <Layout isCookies={true}>
                 <EvacuatorPage></EvacuatorPage>
             </Layout>
         </GlobalContext.Provider>
@@ -230,10 +230,14 @@ export const query = graphql`  query EvacuatorPage {
                     }
                 }
                 polzovatelskoeSoglashenie {
-                    publicUrl
+                    localFile {
+                        publicURL
+                      }
                 }
                 politikaKonfidenczialnosti {
-                    publicUrl
+                    localFile {
+                        publicURL
+                      }
                 }
             }
             cookies {
@@ -241,7 +245,9 @@ export const query = graphql`  query EvacuatorPage {
                 cookiesTekstKnopki
                 cookiesTekst
                 cookiesPolitikaKonfidenczialnosti {
-                    publicUrl
+                    localFile {
+                        publicURL
+                      }
                 }
             }
         }
