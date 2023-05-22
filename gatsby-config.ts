@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
         {
         resolve: 'gatsby-source-wordpress',
         options: {
-            "url": process.env.WPGRAPHQL_URL || "http://admin.angelclub.ru/graphql",
+            "url": process.env.WPGRAPHQL_URL || "https://admin.angelclub.ru/graphql",
         }
     },
         // {
