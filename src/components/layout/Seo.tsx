@@ -62,6 +62,11 @@ const Seo = ({metaData}: SeoProps) => {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Open+Sans:ital,wght@1,300&display=swap"/>
                 {/*<link rel="stylesheet" href="https://yookassa.ru/integration/simplepay/css/yookassa_construct_form.css"/>*/}
                 <script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js"></script>
+                <script
+                    src="https://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossOrigin="anonymous">
+                </script>
         </>
     )
 }

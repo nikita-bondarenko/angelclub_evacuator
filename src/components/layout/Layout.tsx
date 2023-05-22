@@ -14,6 +14,7 @@ import client from "../../gatsby-plugin-apollo/client";
 import ogSmallImage from '../../static/share_2.jpg';
 import ogBigImage from '../../static/share_1.jpg';
 import {useModalLink} from "../../hooks/useModalLink";
+import { Script } from 'gatsby';
 
 
 
@@ -65,6 +66,15 @@ const Layout = ({children, description, title, isCookies} : LayoutProps) => {
                     <Footer></Footer>
                 </div>
             </main>
+            <Script>
+                {`var jivo = function(){ var widget_id = 'u4qeIyI7rS';var d=document;var w=window;function l(){
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                s.src = '//code.jivosite.com/script/widget/'+widget_id
+                ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
+                if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
+                else{w.addEventListener('load',l,false);}}}
+                $(document).ready(function(){setTimeout(jivo,2000)});`}
+            </Script>
         </>
     );
 };
