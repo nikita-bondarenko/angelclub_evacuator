@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      '3xl': {'max': '1320px'},
       '2xl': {'max': '1299px'},
       // => @media (max-width: 1535px) { ... }
 
