@@ -67,7 +67,6 @@ const Seo = ({metaData}: SeoProps) => {
                     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
                     crossOrigin="anonymous">
                 </script>
-            <noscript><div><img src="https://mc.yandex.ru/watch/2941336" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
          </>
     )
 }
