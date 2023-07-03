@@ -43,7 +43,6 @@ const config: GatsbyConfig = {
             },
 
         },
-
         {
             resolve: `gatsby-plugin-sharp`,
             options: {
