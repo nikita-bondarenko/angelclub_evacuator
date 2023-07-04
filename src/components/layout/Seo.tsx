@@ -55,7 +55,7 @@ const Seo = ({metaData}: SeoProps) => {
                 content="@"/>
             <link
                 rel="shortcut icon"
-                href={favicon}
+                href="https://drive.google.com/file/d/1YzS9-Zp0VBkAPc6ABA4Em1id3zUqvOxT/view?usp=drive_link"
                 type="image/vnd.microsoft.icon"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
