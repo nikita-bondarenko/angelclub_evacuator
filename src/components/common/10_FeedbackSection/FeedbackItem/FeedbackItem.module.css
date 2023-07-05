@@ -35,10 +35,14 @@
 }
 
 .person__image {
-    @apply bg-[#D9D9D9] rounded-full w-[30px] h-[30px] flex items-center justify-center font-sans font-semibold text-[14px] text-[rgba(4,4,4,0.2)]
+    @apply bg-[#D9D9D9] rounded-full overflow-hidden w-[30px] h-[30px] flex items-center justify-center font-sans font-semibold text-[14px] text-[rgba(4,4,4,0.2)]
     w-[50px] h-[50px] text-[18px]
     xl:w-[25px] xl:h-[25px] xl:text-[12px] xl:leading-[16px]
     sm:w-[18px] sm:h-[18px] sm:text-[8px] sm:leading-[11px]
+}
+
+.person__picture {
+   @apply w-full h-full object-cover
 }
 
 .person__name {

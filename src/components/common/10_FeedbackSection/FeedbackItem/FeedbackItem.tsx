@@ -3,6 +3,8 @@ import {FeedbackType} from "../config";
 import * as styles from './FeedbackItem.module.css'
 import start from '../images/star.svg'
 import {Swiper, SwiperSlide} from 'swiper/react';
+import {usePrefixImage} from "../../../../hooks/usePrefixImage";
+import {GatsbyImage} from "gatsby-plugin-image";
 // import 'swiper/css';
 
 type FeedbackItemProps = {
@@ -11,7 +13,7 @@ type FeedbackItemProps = {
 
 const FeedbackItem = (props: Queries.WpCommonSections_Feedbacks_feedbacksSlajder &  FeedbackItemProps ) => {
 
-
+const [image] = usePrefixImage(props?.feedbacksFotoKlienta?.gatsbyImage)
     return (
         //  @ts-ignore
         <swiper-slide>
@@ -20,9 +22,9 @@ const FeedbackItem = (props: Queries.WpCommonSections_Feedbacks_feedbacksSlajder
                 <span className={styles.date}>{props.feedbacksData}</span>
                 <div className={styles.top}>
                     <div className={styles.top__person}>
-                        {props.feedbacksImyaKlienta && <div className={styles.person__image}>
-                            {props.feedbacksImyaKlienta[0]}
-                        </div>}
+                         <div className={styles.person__image}>
+                             {image && <GatsbyImage className={styles.person__picture} image={image} alt={''}></GatsbyImage>}
+                        </div>
                         <h3 className={styles.person__name}>{props.feedbacksImyaKlienta}</h3>
                     </div>
                     <div className={styles.top__stars}>

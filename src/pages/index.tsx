@@ -195,6 +195,9 @@ export const query = graphql`  query EvacuatorPage {
                     feedbacksData
                     feedbacksImyaKlienta
                     feedbacksTekst
+                    feedbacksFotoKlienta {
+                        gatsbyImage(formats: WEBP, width: 200)
+                      }
                 }
             }
             online {
