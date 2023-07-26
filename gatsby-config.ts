@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-plugin-favicons',
             options: {
-                logo: './src/favicon.ico',
+                logo: './src/favicon.svg',
                 appName: 'Автоклуб Ангел: Срочный выезд Эвакуатора 27/4 в Москве',
                 background: '#fff',
                 icons: {
