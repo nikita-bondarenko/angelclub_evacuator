@@ -12,6 +12,23 @@ const config: GatsbyConfig = {
         }
     },
         {
+            resolve: 'gatsby-plugin-favicons',
+            options: {
+                logo: './src/favicon.ico',
+                appName: 'Автоклуб Ангел: Срочный выезд Эвакуатора 27/4 в Москве',
+                background: '#fff',
+                icons: {
+                    android: true,
+                    appleIcon: true,
+                    appleStartup: true,
+                    coast: false,
+                    favicons: true,
+                    yandex: true,
+                    windows: true
+                }
+            }
+        },
+        {
             resolve: `gatsby-plugin-yandex-metrika`,
             options: {
                 // The ID of yandex metrika.
@@ -63,7 +80,7 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
-                host: 'https://angel-frontend.testingplace.ru',
+                host: 'https://evacuator.angelclub.ru',
                 policy: [{userAgent: '*', allow: '/'}]
             }
         },
